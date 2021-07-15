@@ -1,0 +1,5 @@
+template poms: 'csap-events/pom.xml', 
+    enableParentVersion: true,
+    enableVersion: true,
+    enableTag: true,
+    defaultTag: 'csap-events'

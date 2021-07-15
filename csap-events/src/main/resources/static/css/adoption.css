@@ -1,0 +1,196 @@
+
+#pie-chart-nav {
+	
+	display: grid;	
+	grid-template-columns: 17em auto;
+	
+}
+
+#pie-chart-nav #minimumHosts {
+	width: 3em;
+}
+
+#pie-chart-nav label.csap {
+	display: block;
+	margin-top: 1em;
+}
+
+#adoption-chart-legend {
+	min-width: 30em;	
+}
+
+#pie-chart-containers {
+	display: grid;	
+	grid-template-columns: repeat( auto-fit, 340px );
+	gap: 1em ;
+}
+
+.legendLayer .background {
+	fill: rgba(255, 255, 255, 0.85);
+	stroke: rgba(0, 0, 0, 0.85);
+	stroke-width: 1;
+}
+
+
+div.graph div.legend {
+	width: 200px;
+	height: 200px;
+}
+
+#plot-tool-tip {
+	position: absolute;
+	display: block;
+	z-index: 99999;
+	border: 2px solid #4572A7;
+	padding: 10px;
+	text-align: middle;
+	font-size: 10pt;
+	border-radius: 6px;
+	background-color: #fff
+}
+
+#plot-tool-tip span {
+	font-weight: bold;
+	padding-left: 1em;
+	color: red;
+}
+
+.linkField {
+	width: 25em;
+}
+
+.descField {
+	width: 10em;
+}
+
+.bordered th, .number {
+	text-align: center;
+}
+
+table {
+	display: inline-block;
+}
+
+.group {
+	display: inline-block;
+	width: 5em;
+	margin-right: 7em;
+	height: 5em;
+	position: relative;
+}
+
+.summlabel {
+	display: inline-block;
+	width: 10em;
+	font-weight: bold;
+	text-align: left;
+	font-size: 1em;
+}
+
+.pie-chart {
+	height: 300px;
+	width: 300px;
+}
+
+.graph {
+
+	background-color: white;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+.graphLabel {
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.value {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	font-size: 1.5em;
+	margin-top: 4px;
+	padding: 5px;
+	text-align: center;
+	width: 6em;
+}
+
+.row {
+	position: relative;
+	white-space: nowrap;
+}
+
+#metrics-collection-button {
+	font-size: 1.5em;
+	font-weight: bold;
+	height: 2.0em;
+	width: 10em;
+	vertical-align: top;
+	margin-top: 1em;
+}
+
+#metrics-collection-button span {
+	display: block;
+	font-size: 9pt;
+}
+
+#csapUser {
+	font-size: 0.8em;
+}
+
+#csapUser .cLabel {
+	text-align: right;
+	width: 5em;
+	display: inline-block;
+	padding-right: 1em;
+	margin-bottom: 0.25em;
+}
+
+#csapUser .value {
+	width: 8em;
+	display: inline-block;
+	padding-right: 1em;
+}
+
+#config {
+	font-size: 10pt;
+}
+
+#config .csap-link {
+	vertical-align: middle;
+}
+
+#config input {
+	font-size: 9pt;
+	width: 2em;
+	line-height: 12px;
+	text-align: center;
+}
+
+.billions {
+	font-size: 9pt;
+	position: absolute;
+}
+
+#about-csap {
+	position: absolute;
+	right: 4em;
+	top: -1.3em;
+	font-size: 9pt;
+}
+
+a.csap-link img {
+	width: 14px;
+	vertical-align: middle;
+}
+
+#summary-header {
+	position: relative;
+	display: grid;
+	grid-template-columns: 16em auto;
+	grid-column-gap: 1em;
+	display: grid;
+}

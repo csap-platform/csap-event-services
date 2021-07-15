@@ -1,0 +1,30 @@
+{
+	"category": "/csap/metrics/jmx/custom/Cssp3ReferenceTibco_8261/30/data",
+	"summary": "Upload",
+	"lifecycle": "dev",
+	"project": "CSAP Engineering",
+	"host": "csap-dev02",
+	"data": {
+		"attributes": {
+			"id": "jmxCssp3ReferenceTibco_30",
+			"hostName": "csap-dev02"
+		},
+		"data": {
+			"timeStamp": ["1439842601001", "1439842568498"],
+			"totalCpu": [1, 1],
+			"jmxHeartbeatMs": [315, 31],
+			"TotalVmCpu": [1, 1],
+			"ProcessCpu": [0, 0],
+			"Spring_JmsListeners": [1, 1],
+			"Spring_JmsCount": [0, 0],
+			"Spring_JmsCountPerSecond": [0, 0],
+			"Spring_JmsMedianTimeMs": [0, 0],
+			"Spring_JmsMaxTimeMs": [0, 0],
+			"Spring_DbcpActive": [0, 0],
+			"Spring_DbcpIdle": [1, 1],
+			"DB_AddItem": [0, 0],
+			"DB_ShowItem": [0, 0]
+		}
+	}
+}
+	

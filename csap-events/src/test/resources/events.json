@@ -1,0 +1,2489 @@
+[
+	{
+		"_id": {
+			"$oid": "5c52811399f7c177516778e1"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947869011,
+			"date": "2019-01-31",
+			"time": "10:17:49",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:49.016Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:49.011Z"
+			}
+		},
+		"host": "netmet-qa03",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 0.7,
+				"host": "netmet-qa03",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-qa03": [
+					"netmet-qa03: netmet-mongo: OS Threads: 130, Alert threshold: 120",
+					"netmet-qa03: csap-agent: Application Heartbeat failure. Review health report: http://netmet-qa03.lab.sensus.net:8011/csap-agent/csap/health"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 45,
+				"active": 17
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:49.016Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c5281ee99f7c17751677d41"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947867239,
+			"date": "2019-01-31",
+			"time": "10:17:47",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:47.244Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:47.239Z"
+			}
+		},
+		"host": "netmet-dev-perf03",
+		"appId": "SensusCsap",
+		"counter": 123,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 1.4,
+				"host": "netmet-dev-perf03",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-dev-perf03": [
+					"netmet-dev-perf03: cp-kafka-broker: Disk Space: 64100Mb, Alert threshold: 30720Mb",
+					"netmet-dev-perf03: heron-bookie: Disk Space: 174Mb, Alert threshold: 150Mb",
+					"netmet-dev-perf03: ingestion-topology: OS File Handles: 387 open, Alert threshold: 350",
+					"netmet-dev-perf03: graylog: Disk Writes: 13Kb/s, Alert threshold: 10"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 46,
+				"active": 24
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:47.244Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c5280f699f7c1775167787d"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947858424,
+			"date": "2019-01-31",
+			"time": "10:17:38",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:38.432Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:38.424Z"
+			}
+		},
+		"host": "netmet-desktop11",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 2.2,
+				"host": "netmet-desktop11",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-desktop11": [
+					"netmet-desktop11: netmet-springBootAdmin: OS Threads: 122, Alert threshold: 120",
+					"netmet-desktop11: k8s-api-server: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: k8s-calico-etcd: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: k8s-calico-node: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: k8s-controller-mgr: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: k8s-ingress-nginx: OS Threads: 580, Alert threshold: 120",
+					"netmet-desktop11: k8s-ingress-nginx: OS File Handles: 1632 open, Alert threshold: 1000",
+					"netmet-desktop11: k8s-proxy: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: k8s-scheduler: Network Connections: 517 sockets, Alert threshold: 500",
+					"netmet-desktop11: heron-bookie: OS Threads: 161, Alert threshold: 120"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 38,
+				"active": 38
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:38.432Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c5284e999f7c17751678658"
+		},
+		"category": "/csap/reports/host/daily",
+		"createdOn": {
+			"unixMs": 1548947845443,
+			"date": "2019-01-31",
+			"time": "10:17:25",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:25.454Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:25.443Z"
+			}
+		},
+		"host": "netmet-desktop09",
+		"appId": "SensusCsap",
+		"counter": 21,
+		"data": {
+			"summary": {
+				"cpuCountAvg": 16,
+				"memoryInMbAvg": 32011,
+				"swapInMbAvg": 16383,
+				"totActivity": 226,
+				"numberOfSamples": 2640,
+				"totalUsrCpu": 18446,
+				"totalSysCpu": 8808,
+				"totalMemFree": 11546338,
+				"totalBufFree": 18318219,
+				"totalIo": 637,
+				"alertsCount": 6,
+				"totalLoad": 5114.280000000001,
+				"totalFiles": 33539936,
+				"threadsTotal": 21088434,
+				"csapThreadsTotal": 17071573,
+				"fdTotal": 51943623,
+				"csapFdTotal": 44110268,
+				"socketTotal": 1410506,
+				"socketWaitTotal": 19051,
+				"socketTimeWaitTotal": 115522,
+				"totalDiskTestTime": 9970.259999999997,
+				"totalCpuTestTime": 12474.739999999998,
+				"totalIoReads": 11164,
+				"totalIoWrites": 66507,
+				"totalNetworkReceived": 4143.419999999998,
+				"totalNetworkTransmitted": 343.84000000000015,
+				"totalsda": 17530
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:25.454Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c5284e999f7c17751678656"
+		},
+		"category": "/csap/metrics/host/30/data",
+		"createdOn": {
+			"unixMs": 1548947845442,
+			"date": "2019-01-31",
+			"time": "10:17:25",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:25.447Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:25.442Z"
+			}
+		},
+		"host": "netmet-desktop09",
+		"appId": "SensusCsap",
+		"counter": 21,
+		"dataKey": "5c53118559c53b2d32758922",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:25.447Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c5281a299f7c17751677bc9"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947842659,
+			"date": "2019-01-31",
+			"time": "10:17:22",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:22.664Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:22.659Z"
+			}
+		},
+		"host": "netmet-sandbox03",
+		"appId": "SensusCsap",
+		"counter": 123,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 2.9,
+				"host": "netmet-sandbox03",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-sandbox03": [
+					"netmet-sandbox03: netmet-mongo: Disk Space: 2096Mb, Alert threshold: 2048Mb",
+					"netmet-sandbox03: cp-kafka-broker: Disk Space: 51249Mb, Alert threshold: 30720Mb",
+					"netmet-sandbox03: ingestion-topology: OS File Handles: 391 open, Alert threshold: 350",
+					"netmet-sandbox03: csap-agent: Application Heartbeat failure. Review health report: http://netmet-sandbox03.lab.sensus.net:8011/csap-agent/csap/health"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 46,
+				"active": 25
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:22.664Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c5280f799f7c17751677882"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947838889,
+			"date": "2019-01-31",
+			"time": "10:17:18",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:18.893Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:18.889Z"
+			}
+		},
+		"host": "netmet-test02",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 1.0,
+				"host": "netmet-test02",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-test02": [
+					"netmet-test02: ingestion-topology: OS File Handles: 387 open, Alert threshold: 350",
+					"netmet-test02: csap-agent: Application Heartbeat failure. Review health report: http://netmet-test02.lab.sensus.net:8011/csap-agent/csap/health"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 46,
+				"active": 22
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:18.893Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c53117e59c53b2d32758921"
+		},
+		"category": "/csap/system/service/heron-apiserver",
+		"summary": "Script: csap-job-run.sh, triggered by: csap-agent",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "csap-dev10",
+		"createdOn": {
+			"unixMs": 1548947838357,
+			"date": "2019-01-31",
+			"time": "10:17:18",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:18.361Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:18.357Z"
+			}
+		},
+		"data": {
+			"csapText": "\n\n Script:\t\t\tcsap-job-run.sh\n\n Timeout:\t\t\t300\n\n workingDir:\t\t /opt/csapUser/staging\n\n Command:\t\t[bash, /opt/csapUser/staging/bin/csap-job-run.sh, -jmxAuth, false, -csapDeployOp, -serviceName, heron-apiserver, -ver, dev, -serviceEnv, dev-heron-platform, -clusterScmPath, /opt/csapUser/staging/build/sensus-integration-definition.git, -repo, http://moc-artifactory.lab.sensus.net/artifactory/csap-release, -context, heron-apiserver, -serverType, docker, -osProcessPriority, 0, -l, dev]\n Custom Attributes:\t\t[heron_deploy_image, heron_deploy_name]\n"
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:18.361Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c53117e59c53b2d32758920"
+		},
+		"category": "/csap/system/service/kubernetes-dashboard",
+		"summary": "Deployment Completed For Service kubernetes-dashboard_0",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "csap-dev10",
+		"createdOn": {
+			"unixMs": 1548947838269,
+			"date": "2019-01-31",
+			"time": "10:17:18",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:18.276Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:18.269Z"
+			}
+		},
+		"data": {
+			"csapText": ""
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:18.276Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c53117e99f7c17751692e84"
+		},
+		"category": "/csap/system/service/kubernetes-dashboard/job",
+		"createdOn": {
+			"unixMs": 1548947838256,
+			"date": "2019-01-31",
+			"time": "10:17:18",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:18.267Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:18.256Z"
+			}
+		},
+		"host": "csap-dev10",
+		"appId": "SensusCsap",
+		"counter": 1,
+		"data": {
+			"csapText": "Executing OS command on host csap-dev10:/opt/csapUser/staging/bin/csap-job-run.sh_P_\n\n   Reloading '/opt/csapUser/.bashrc'\n_______________________________________________________________________________________________\n\n/opt/csapUser/.bashrc: line 71: ulimit: open files: cannot modify limit: Operation not permitted\n_______________________________________________________________________________________________\n\n_______________________________________________________________________________________________\n \n 01/31/2019 10:10:04 925624132ms host: 'csap-dev10.lab.sensus.net' user: 'csapUser' \n csap-job-run.sh \n_______________________________________________________________________________________________\n\n\n_______________________________________________________________________________________________\n \n  Environment variables set by CSAP . For shell scripts: use \"$variable\",  for java: System.getenv().get(\"variable\") \n_______________________________________________________________________________________________\n\n       csapName: kubernetes-dashboard csapPrimaryPort: 0                                   :                      \n   csapHttpPort: 0                        csapJmxPort:                                     :                      \n     csapServer: docker                    csapTomcat:                      csapHttpPerHost:                      \n    csapPackage: NetMet Injestion            csapLife: dev                        csapLbUrl: http://csap-dev01.lab.sensus.net:8080 \n    csapVersion: os                   csapServiceLife: dev-k8s-services-system                :                      \n  csapProcessId: kubernetes-dashboard_0        csapPids:                           csapParams:                      \n csapWorkingDir: /opt/csapUser/processing/kubernetes-dashboard_0      csapLogDir: /opt/csapUser/processing/kubernetes-dashboard_0/logs                :                      \ncustomAttributes: []                               set: only for this service                :                      \ncsapResourceFolder: /opt/csapUser/staging/conf/propertyOverride/kubernetes-dashboard/resources             set: Application over ride files                :                      \n        csapAjp: MASKED                      Refer to: https://github.com/csap-platform/csap-core/wiki#updateRefCSAP+Loadbalancing                :                      \n      csapPeers: csap-dev11                csap-dev12:                                     :                      \nCsap Encryption:                       CSAP_ALGORITHM: PBEWITHMD5ANDTRIPLEDES         CSAP_ID: Encryption token masked \n redisSentinels:                                     :                                     :                      \n  notifications: -                      csapAddresses: disabled               csapFrequency:                      \n csapMaxBacklog:                                     :                                     :                      \n        STAGING: /opt/csapUser/staging      PROCESSING: /opt/csapUser/processing      CLUSTERDEF:                      \n hostUrlPattern: http://CSAP_HOST.lab.sensus.net:8011/csap-agent      mailServer: myrelay.sensus.com   csapDockerRepository:                      \n   \n\n_______________________________________________________________________________________________\n \n  JAVA_HOME: '/opt/java/jdk-11.0.1' , java -version: 'Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)' \n_______________________________________________________________________________________________\n\n\n_______________________________________________________________________________________________\n \n  setting working directory to /opt/csapUser/processing/kubernetes-dashboard_0 \n_______________________________________________________________________________________________\n\n\n_______________________________________________________________________________________________\n \n  Using bash eval on: 'wait_for_pod_log kubernetes-dashboard 'Successful request to heapster' 1 kube-system 200' \n_______________________________________________________________________________________________\n\n\n_______________________________________________________________________________________________\n \n  Waiting for: '1' pods in run state: 'kubernetes-dashboard' in '--namespace=kube-system'. \n_______________________________________________________________________________________________\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 1 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 2 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 3 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 4 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 5 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 6 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 7 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 8 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 9 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 10 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 11 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 12 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 13 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 14 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 15 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 16 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 17 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 18 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 19 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 20 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 21 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 22 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 23 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 24 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 25 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 26 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 27 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 28 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 29 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 30 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 31 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 32 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 33 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 34 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 35 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 36 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 37 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 38 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 39 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 40 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 41 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 42 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 43 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 44 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 45 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 46 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 47 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 48 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 49 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 50 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 51 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 52 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 53 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 54 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 55 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 56 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 57 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 58 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 59 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 60 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 61 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 62 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 63 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 64 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 65 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 66 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 67 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 68 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 69 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 70 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 71 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 72 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 73 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 74 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 75 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 76 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 77 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 78 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 79 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 80 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 81 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 82 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 83 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 84 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 85 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 86 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 87 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 88 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 89 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 90 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 91 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 92 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 93 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 94 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 95 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 96 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 97 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 98 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 99 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 100 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 101 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 102 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 103 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 104 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 105 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 106 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 107 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 108 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 109 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 110 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 111 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 112 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 113 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 114 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 115 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 116 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 117 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 118 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 119 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 120 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 121 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 122 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 123 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 124 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 125 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 126 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 127 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 128 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 129 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 130 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 131 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 132 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 133 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 134 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 135 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 136 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 137 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 138 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 139 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 140 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 141 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 142 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 143 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 144 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 145 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 146 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 147 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 148 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 149 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 150 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 151 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 152 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 153 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 154 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 155 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 156 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 157 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 158 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 159 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 160 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 161 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 162 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 163 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 164 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 165 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 166 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 167 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 168 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 169 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 170 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 171 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 172 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 173 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 174 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 175 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 176 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 177 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 178 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 179 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 180 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 181 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 182 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 183 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 184 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 185 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 186 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 187 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 188 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 189 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 190 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 191 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 192 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 193 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 194 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 195 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 196 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 197 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 198 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 199 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   attempt 200 of 200: \n\n\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n   Pod pattern: 'kubernetes-dashboard', '0' in running state\nThe connection to the server localhost:8080 was refused - did you specify the right host or port?\n\n_______________________________________________________________________________________________\n \n  Waiting for logs pattern: 'Successful request to heapster', pod_tail: '--tail=200', in pods: ''  \n_______________________________________________________________________________________________\n\n\n_______________________________________________________________________________________________\n \n  Pod pattern: 'kubernetes-dashboard', log pattern: 'Successful request to heapster', matches: ''  \n_______________________________________________________________________________________________\n\n"
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:18.267Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Service Job: wait for pod startup"
+	},
+	{
+		"_id": {
+			"$oid": "5c53117b59c53b2d3275891f"
+		},
+		"category": "/csap/ui/os/file/tail",
+		"summary": "User interface: /opt/csapUser/processing/__docker__/grafana",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "netmet-desktop13",
+		"createdOn": {
+			"unixMs": 1548947835519,
+			"date": "2019-01-31",
+			"time": "10:17:15",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:15.522Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:15.519Z"
+			}
+		},
+		"metaData": {
+			"uiUser": "dsulzen"
+		},
+		"data": {
+			"csapText": ""
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:15.522Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c5280d499f7c177516777f1"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947830519,
+			"date": "2019-01-31",
+			"time": "10:17:10",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:10.523Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:10.519Z"
+			}
+		},
+		"host": "netmet-sandbox01",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 1.2,
+				"host": "netmet-sandbox01",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-sandbox01": [
+					"netmet-sandbox01: admin: Application Heartbeat failure. Review health report: http://netmet-sandbox01.lab.sensus.net:8021/admin/csap/health",
+					"netmet-sandbox01: nfs-client-provisioner: Kubernetes process checks not supported on master - use csap admin",
+					"netmet-sandbox01: cp-kafka-broker: Disk Space: 51154Mb, Alert threshold: 30720Mb",
+					"netmet-sandbox01: graylog: Disk Writes: 92Kb/s, Alert threshold: 10",
+					"netmet-sandbox01: prometheus-server: Disk Writes: 20Kb/s, Alert threshold: 10",
+					"netmet-sandbox01: csap-agent: Process CPU: 25%, Alert threshold: 20",
+					"netmet-sandbox01: csap-agent: Application Heartbeat failure. Review health report: http://netmet-sandbox01.lab.sensus.net:8011/csap-agent/csap/health"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 47,
+				"active": 21
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:10.523Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c53117059c53b2d3275891d"
+		},
+		"category": "/csap/ui/service/rni-mgmt-mongo",
+		"summary": "/runaway/kill/: currentDisk:  Collected: 374,  kill limit: 300",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "saasrni-csap01",
+		"createdOn": {
+			"unixMs": 1548947824198,
+			"date": "2019-01-31",
+			"time": "10:17:04",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:04.208Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:04.198Z"
+			}
+		},
+		"data": {
+			"serviceName": "rni-mgmt-mongo",
+			"serverType": "docker",
+			"clusterType": "simple",
+			"host": "saasrni-csap01",
+			"port": "0",
+			"userStop": true,
+			"scmVersion": "Jan.15-14.37 \nDocker Pull by: mgong at 14:37:22 Jan 15",
+			"warDate": "DeployFileNotFound",
+			"eolJars": [],
+			"iconType": "docker",
+			"user": "root",
+			"deployedArtifacts": "3.6",
+			"containers": [
+				{
+					"containerName": "/rni-mgmt-mongo",
+					"resourceViolations": [
+						"currentDisk:  Collected: 374,  kill limit: 300"
+					],
+					"pid": [
+						"1007"
+					],
+					"virtualMemory": 1010976,
+					"autoKillInProgress": false,
+					"currentProcessPriority": "0",
+					"runHeap": "",
+					"running": true,
+					"pidsAsString": "1007",
+					"cpuUtil": "0.3",
+					"rssMemory": 85108,
+					"jmxHeartbeatMs": 0,
+					"tomcatConnections": 0,
+					"jvmThreadCount": 0,
+					"diskReadKb": 0,
+					"diskWriteKb": 2,
+					"topCpu": "0.3",
+					"diskUtil": 374,
+					"fileCount": 42,
+					"socketCount": 2,
+					"threadCount": 25
+				}
+			]
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:04.208Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c53117059c53b2d3275891c"
+		},
+		"category": "/csap/system/runaway/kill/rni-mgmt-mongo",
+		"summary": "currentDisk:  Collected: 374,  kill limit: 300",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "saasrni-csap01",
+		"createdOn": {
+			"unixMs": 1548947824198,
+			"date": "2019-01-31",
+			"time": "10:17:04",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:04.202Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:04.198Z"
+			}
+		},
+		"data": {
+			"serviceName": "rni-mgmt-mongo",
+			"serverType": "docker",
+			"clusterType": "simple",
+			"host": "saasrni-csap01",
+			"port": "0",
+			"userStop": true,
+			"scmVersion": "Jan.15-14.37 \nDocker Pull by: mgong at 14:37:22 Jan 15",
+			"warDate": "DeployFileNotFound",
+			"eolJars": [],
+			"iconType": "docker",
+			"user": "root",
+			"deployedArtifacts": "3.6",
+			"containers": [
+				{
+					"containerName": "/rni-mgmt-mongo",
+					"resourceViolations": [
+						"currentDisk:  Collected: 374,  kill limit: 300"
+					],
+					"pid": [
+						"1007"
+					],
+					"virtualMemory": 1010976,
+					"autoKillInProgress": false,
+					"currentProcessPriority": "0",
+					"runHeap": "",
+					"running": true,
+					"pidsAsString": "1007",
+					"cpuUtil": "0.3",
+					"rssMemory": 85108,
+					"jmxHeartbeatMs": 0,
+					"tomcatConnections": 0,
+					"jvmThreadCount": 0,
+					"diskReadKb": 0,
+					"diskWriteKb": 2,
+					"topCpu": "0.3",
+					"diskUtil": 374,
+					"fileCount": 42,
+					"socketCount": 2,
+					"threadCount": 25
+				}
+			]
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:04.202Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c5281bf99f7c17751677c8a"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947822395,
+			"date": "2019-01-31",
+			"time": "10:17:02",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:17:02.400Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:17:02.395Z"
+			}
+		},
+		"host": "csap-dev03",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 0.0,
+				"host": "csap-dev03",
+				"packageName": "CSAP Platform",
+				"capabilityName": "Sensus Integration",
+				"lifecycle": "dev"
+			},
+			"Healthy": true,
+			"services": {
+				"total": 8,
+				"active": 8
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:17:02.400Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c5280ec99f7c17751677852"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1548947819739,
+			"date": "2019-01-31",
+			"time": "10:16:59",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:16:59.743Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:16:59.739Z"
+			}
+		},
+		"host": "netmet-test03",
+		"appId": "SensusCsap",
+		"counter": 124,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 0.7,
+				"host": "netmet-test03",
+				"packageName": "NetMet Services",
+				"capabilityName": "Network Metrics",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"netmet-test03": [
+					"netmet-test03: ingestion-topology: OS File Handles: 381 open, Alert threshold: 350",
+					"netmet-test03: csap-agent: Application Heartbeat failure. Review health report: http://netmet-test03.lab.sensus.net:8011/csap-agent/csap/health"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 46,
+				"active": 22
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:16:59.743Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c53116a99f7c17751692e52"
+		},
+		"category": "/csap/metrics/host/3600/data",
+		"createdOn": {
+			"unixMs": 1548947818926,
+			"date": "2019-01-31",
+			"time": "10:16:58",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:16:58.931Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:16:58.926Z"
+			}
+		},
+		"host": "luna-store03",
+		"appId": "SensusCsap",
+		"counter": 1,
+		"dataKey": "5c53116a59c53b2d3275891b",
+		"expiresAt": {
+			"$date": "2020-01-31T15:16:58.931Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53116759c53b2d3275891a"
+		},
+		"category": "/csap/system/service/grafana",
+		"summary": "Kill request added to queue",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "netmet-desktop13",
+		"createdOn": {
+			"unixMs": 1548947815695,
+			"date": "2019-01-31",
+			"time": "10:16:55",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:16:55.708Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:16:55.695Z"
+			}
+		},
+		"data": {
+			"csapText": " Command: \n[]"
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:16:55.708Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c53116759c53b2d32758919"
+		},
+		"category": "/csap/ui/service/grafana",
+		"summary": "Kill Request Received",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "netmet-desktop13",
+		"createdOn": {
+			"unixMs": 1548947815694,
+			"date": "2019-01-31",
+			"time": "10:16:55",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:16:55.701Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:16:55.694Z"
+			}
+		},
+		"metaData": {
+			"uiUser": "dsulzen"
+		},
+		"data": {
+			"csapText": " clean:null"
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-01-31T15:16:55.701Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5c5284c099f7c17751678624"
+		},
+		"category": "/csap/reports/jmxCustom/daily",
+		"createdOn": {
+			"unixMs": 1548947811674,
+			"date": "2019-01-31",
+			"time": "10:16:51",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T15:16:51.718Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T15:16:51.674Z"
+			}
+		},
+		"host": "netmet-desktop09",
+		"appId": "SensusCsap",
+		"counter": 21,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "admin",
+					"numberOfSamples": 2600,
+					"TotalVmCpu": 24784,
+					"ProcessCpu": 1240,
+					"SpringMvcRequests": 2071,
+					"ConsoleRequests": 1522,
+					"AdminConsolePings": 0,
+					"AgentHeartBeatCount": 1319,
+					"AgentHeartBeatMeanMs": 817295,
+					"AgentHeartBeatMaxTimeMs": 818911,
+					"jmxHeartbeatMs": 2161
+				},
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 2600,
+					"TotalVmCpu": 24784,
+					"ProcessCpu": 5536,
+					"AdminPingsMeanMs": 1751440,
+					"linuxPsAndMatchMeanMs": 8725337,
+					"LogRotationMs": 68569,
+					"serviceDiskUsage": 7633077,
+					"publishEvents": 944,
+					"publishEventsMs": 36369,
+					"SpringMvcRequests": 14426,
+					"JavaCollectionCounter": 2925,
+					"JmxCollectionMs": 111053,
+					"JmxCollectionFailures": 0,
+					"JmxCustomCollectionFailures": 0,
+					"CommandsSinceRestart": 140328397,
+					"OsCommandsCounter": 106241,
+					"OsCommandsMeanMs": 1662231,
+					"OsCommandsMaxTimeMs": 24258665,
+					"jmxHeartbeatMs": 1293
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 2600,
+					"TotalVmCpu": 24784,
+					"ProcessCpu": 34,
+					"SpringJmsListeners": 2639,
+					"SpringJmsCount": 0,
+					"SpringJmsCountPerSecond": 0,
+					"SpringJmsMedianTimeMs": 0,
+					"SpringJmsMaxMs": 0,
+					"SpringDbcpActive": 0,
+					"SpringDbcpIdle": 1,
+					"DBAddItem": 0,
+					"DBAddItemMs": 0,
+					"DBShowItem": 0,
+					"DBShowItemMs": 0,
+					"jmxHeartbeatMs": 2684
+				},
+				{
+					"serviceName": "netmet-towers-service-1",
+					"numberOfSamples": 2600,
+					"messagesReceived": 0,
+					"messagesReceivedDelta": 0,
+					"messagesProcessed": 0,
+					"messagesProcessedDelta": 0
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-01-31T15:16:51.718Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38199f7c177516b7e41"
+		},
+		"category": "/csap/reports/host/daily",
+		"createdOn": {
+			"unixMs": 1549048161426,
+			"date": "2019-02-01",
+			"time": "14:09:21",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:21.435Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:21.426Z"
+			}
+		},
+		"host": "csap-dev10",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"data": {
+			"summary": {
+				"cpuCountAvg": 16,
+				"memoryInMbAvg": 32010,
+				"swapInMbAvg": 0,
+				"totActivity": 8,
+				"numberOfSamples": 183,
+				"totalUsrCpu": 317,
+				"totalSysCpu": 215,
+				"totalMemFree": 5001132,
+				"totalBufFree": 1217021,
+				"totalIo": 7,
+				"alertsCount": 0,
+				"totalLoad": 98.60000000000002,
+				"totalFiles": 652192,
+				"threadsTotal": 407363,
+				"csapThreadsTotal": 273805,
+				"fdTotal": 860636,
+				"csapFdTotal": 758963,
+				"socketTotal": 59555,
+				"socketWaitTotal": 43,
+				"socketTimeWaitTotal": 5533,
+				"totalDiskTestTime": 531.8499999999999,
+				"totalCpuTestTime": 915.7500000000002,
+				"totalIoReads": 58,
+				"totalIoWrites": 8778,
+				"totalNetworkReceived": 1684.9399999999996,
+				"totalNetworkTransmitted": 288.40999999999997,
+				"totalsda": 242
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:21.435Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38199f7c177516b7e3f"
+		},
+		"category": "/csap/metrics/host/30/data",
+		"createdOn": {
+			"unixMs": 1549048161425,
+			"date": "2019-02-01",
+			"time": "14:09:21",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:21.429Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:21.425Z"
+			}
+		},
+		"host": "csap-dev10",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"dataKey": "5c549961a92930410b2ceaf0",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:21.429Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d49299f7c177516b81fe"
+		},
+		"category": "/csap/reports/host/daily",
+		"createdOn": {
+			"unixMs": 1549048158362,
+			"date": "2019-02-01",
+			"time": "14:09:18",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:18.371Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:18.362Z"
+			}
+		},
+		"host": "netmet-desktop09",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"data": {
+			"summary": {
+				"cpuCountAvg": 16,
+				"memoryInMbAvg": 32011,
+				"swapInMbAvg": 0,
+				"totActivity": 179,
+				"numberOfSamples": 2880,
+				"totalUsrCpu": 6468,
+				"totalSysCpu": 3034,
+				"totalMemFree": 71774596,
+				"totalBufFree": 54238383,
+				"totalIo": 30,
+				"alertsCount": 0,
+				"totalLoad": 1311.2699999999998,
+				"totalFiles": 10962336,
+				"threadsTotal": 8226002,
+				"csapThreadsTotal": 5177375,
+				"fdTotal": 17045439,
+				"csapFdTotal": 14607495,
+				"socketTotal": 423460,
+				"socketWaitTotal": 453,
+				"socketTimeWaitTotal": 61560,
+				"totalDiskTestTime": 8441.229999999998,
+				"totalCpuTestTime": 16275.970000000005,
+				"totalIoReads": 0,
+				"totalIoWrites": 37944,
+				"totalNetworkReceived": -2880.0,
+				"totalNetworkTransmitted": -2880.0,
+				"totalsda": 1065
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:18.371Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d49299f7c177516b81fc"
+		},
+		"category": "/csap/metrics/host/30/data",
+		"createdOn": {
+			"unixMs": 1549048158361,
+			"date": "2019-02-01",
+			"time": "14:09:18",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:18.366Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:18.361Z"
+			}
+		},
+		"host": "netmet-dev03",
+		"appId": "netMetAppId",
+		"counter": 29,
+		"dataKey": "5c54995ea92930410b2ceaef",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:18.366Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38999f7c177516b7e75"
+		},
+		"category": "/csap/reports/jmxCustom/daily",
+		"createdOn": {
+			"unixMs": 1549048156742,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.771Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.742Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 167,
+					"TotalVmCpu": 1334,
+					"ProcessCpu": 6,
+					"AdminPingsMeanMs": 85014,
+					"linuxPsAndMatchMeanMs": 61657,
+					"LogRotationMs": 4055,
+					"serviceDiskUsage": 51217,
+					"publishEvents": 55,
+					"publishEventsMs": 61495,
+					"SpringMvcRequests": 236,
+					"JavaCollectionCounter": 203,
+					"JmxCollectionMs": 3785,
+					"JmxCollectionFailures": 0,
+					"JmxCustomCollectionFailures": 0,
+					"CommandsSinceRestart": 338075,
+					"OsCommandsCounter": 3761,
+					"OsCommandsMeanMs": 99254,
+					"OsCommandsMaxTimeMs": 1553639,
+					"jmxHeartbeatMs": 168
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 167,
+					"TotalVmCpu": 1336,
+					"ProcessCpu": 9,
+					"SpringJmsListeners": 179,
+					"SpringJmsCount": 0,
+					"SpringJmsCountPerSecond": 0,
+					"SpringJmsMedianTimeMs": 0,
+					"SpringJmsMaxMs": 0,
+					"SpringDbcpActive": 0,
+					"SpringDbcpIdle": 33,
+					"DBAddItem": 0,
+					"DBAddItemMs": 0,
+					"DBShowItem": 0,
+					"DBShowItemMs": 0,
+					"jmxHeartbeatMs": 180
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.771Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38999f7c177516b7e73"
+		},
+		"category": "/csap/metrics/jmx/custom/csap-verify-service_7011/30/data",
+		"createdOn": {
+			"unixMs": 1549048156742,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.766Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.742Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"dataKey": "5c54995ca92930410b2ceaee",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.766Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38999f7c177516b7e70"
+		},
+		"category": "/csap/metrics/jmx/custom/csap-agent_8011/30/data",
+		"createdOn": {
+			"unixMs": 1549048156741,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.761Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.741Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"dataKey": "5c54995ca92930410b2ceaed",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.761Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38999f7c177516b7e6d"
+		},
+		"category": "/csap/reports/jmx/daily",
+		"createdOn": {
+			"unixMs": 1549048156741,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.757Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.741Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 167,
+					"cpuPercent": 8,
+					"tomcatConnections": 751,
+					"httpRequestCount": 236,
+					"httpProcessingTime": 84185,
+					"httpKbytesReceived": 44,
+					"httpKbytesSent": 4,
+					"sessionsCount": 0,
+					"sessionsActive": 0,
+					"openFiles": 25340,
+					"minorGcInMs": 2671,
+					"majorGcInMs": 0,
+					"heapUsed": 27299,
+					"heapMax": 46848,
+					"tomcatThreadsBusy": 4,
+					"tomcatThreadCount": 3660,
+					"jvmThreadCount": 14411,
+					"jvmThreadsMax": 14732
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 167,
+					"cpuPercent": 9,
+					"tomcatConnections": 358,
+					"httpRequestCount": 0,
+					"httpProcessingTime": 0,
+					"httpKbytesReceived": 0,
+					"httpKbytesSent": 0,
+					"sessionsCount": 0,
+					"sessionsActive": 0,
+					"openFiles": 17852,
+					"minorGcInMs": 104,
+					"majorGcInMs": 0,
+					"heapUsed": 22063,
+					"heapMax": 46080,
+					"tomcatThreadsBusy": 0,
+					"tomcatThreadCount": 3580,
+					"jvmThreadCount": 10138,
+					"jvmThreadsMax": 12543
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.757Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d38999f7c177516b7e6b"
+		},
+		"category": "/csap/metrics/jmx/standard/30/data",
+		"createdOn": {
+			"unixMs": 1549048156741,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.751Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.741Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"dataKey": "5c54995ca92930410b2ceaec",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.751Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c54995ca92930410b2ceaeb"
+		},
+		"category": "/csap/metrics/jmx/standard/30/attributes",
+		"summary": "Modified",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "csap-dev11",
+		"createdOn": {
+			"unixMs": 1549048156740,
+			"date": "2019-02-01",
+			"time": "14:09:16",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:16.745Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:16.740Z"
+			}
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:16.745Z"
+		},
+		"dataKey": "5c54995ca92930410b2ceaea"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d39299f7c177516b7e94"
+		},
+		"category": "/csap/reports/process/daily",
+		"createdOn": {
+			"unixMs": 1549048154114,
+			"date": "2019-02-01",
+			"time": "14:09:14",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:14.142Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:14.114Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "heron-ui-1",
+					"numberOfSamples": 183,
+					"topCpu": 5,
+					"threadCount": 294,
+					"fileCount": 1584,
+					"socketCount": 144,
+					"rssMemory": 3969,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "tiller-1",
+					"numberOfSamples": 183,
+					"topCpu": 3,
+					"threadCount": 4360,
+					"fileCount": 1064,
+					"socketCount": 152,
+					"rssMemory": 4707,
+					"diskUtil": 148,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "kubernetes-dashboard-1",
+					"numberOfSamples": 183,
+					"topCpu": 4,
+					"threadCount": 4370,
+					"fileCount": 942,
+					"socketCount": 157,
+					"rssMemory": 3447,
+					"diskUtil": 158,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "netmet-injestion-1",
+					"numberOfSamples": 183,
+					"topCpu": 15794,
+					"threadCount": 29870,
+					"fileCount": 42432,
+					"socketCount": 5919,
+					"rssMemory": 270386,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 1355
+				},
+				{
+					"serviceName": "prometheus-jmx-exporter-2",
+					"numberOfSamples": 180,
+					"topCpu": 0,
+					"threadCount": 5145,
+					"fileCount": 1584,
+					"socketCount": 2292,
+					"rssMemory": 10716,
+					"diskUtil": 147,
+					"diskReadKb": 0,
+					"diskWriteKb": 66
+				},
+				{
+					"serviceName": "heron-apiserver-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "prometheus-jmx-exporter-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 5390,
+					"fileCount": 1628,
+					"socketCount": 1811,
+					"rssMemory": 7819,
+					"diskUtil": 138,
+					"diskReadKb": 0,
+					"diskWriteKb": 82
+				},
+				{
+					"serviceName": "netmet-injestion-2",
+					"numberOfSamples": 180,
+					"topCpu": 1417,
+					"threadCount": 33930,
+					"fileCount": 47046,
+					"socketCount": 6297,
+					"rssMemory": 303857,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 722
+				},
+				{
+					"serviceName": "k8s-api-etcd-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 407063,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "heron-bookie-1",
+					"numberOfSamples": 183,
+					"topCpu": 1,
+					"threadCount": 23212,
+					"fileCount": 15408,
+					"socketCount": 432,
+					"rssMemory": 51658,
+					"diskUtil": 2192,
+					"diskReadKb": 0,
+					"diskWriteKb": 35
+				},
+				{
+					"serviceName": "docker",
+					"numberOfSamples": 183,
+					"topCpu": 620,
+					"threadCount": 7034,
+					"fileCount": 27009,
+					"socketCount": 1230,
+					"rssMemory": 16451,
+					"diskUtil": 0,
+					"diskReadKb": 0,
+					"diskWriteKb": 220712
+				},
+				{
+					"serviceName": "k8s-calico-etcd-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 407063,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "nginx-ingress-controller-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "cp-zookeeper-server-1",
+					"numberOfSamples": 183,
+					"topCpu": 8,
+					"threadCount": 10435,
+					"fileCount": 19897,
+					"socketCount": 2312,
+					"rssMemory": 20703,
+					"diskUtil": 148,
+					"diskReadKb": 0,
+					"diskWriteKb": 127
+				},
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 183,
+					"topCpu": 606,
+					"threadCount": 19107,
+					"fileCount": 24267,
+					"socketCount": 1373,
+					"rssMemory": 175887,
+					"diskUtil": 20665,
+					"diskReadKb": 1062,
+					"diskWriteKb": 70292
+				},
+				{
+					"serviceName": "kubelet",
+					"numberOfSamples": 183,
+					"topCpu": 420,
+					"threadCount": 7929,
+					"fileCount": 5453,
+					"socketCount": 2306,
+					"rssMemory": 16673,
+					"diskUtil": 2467,
+					"diskReadKb": 0,
+					"diskWriteKb": 9
+				},
+				{
+					"serviceName": "k8s-calico-node-1",
+					"numberOfSamples": 183,
+					"topCpu": 168,
+					"threadCount": 12609,
+					"fileCount": 11885,
+					"socketCount": 22977,
+					"rssMemory": 6682,
+					"diskUtil": 28896,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "k8s-api-server-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "cp-kafka-broker-1",
+					"numberOfSamples": 183,
+					"topCpu": 166,
+					"threadCount": 15328,
+					"fileCount": 30537,
+					"socketCount": 1773,
+					"rssMemory": 85121,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 221
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 183,
+					"topCpu": 107,
+					"threadCount": 14928,
+					"fileCount": 17033,
+					"socketCount": 793,
+					"rssMemory": 121242,
+					"diskUtil": 12960,
+					"diskReadKb": 0,
+					"diskWriteKb": 172
+				},
+				{
+					"serviceName": "heron-tracker-1",
+					"numberOfSamples": 183,
+					"topCpu": 5,
+					"threadCount": 735,
+					"fileCount": 2160,
+					"socketCount": 144,
+					"rssMemory": 4849,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:14.142Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d39299f7c177516b7e92"
+		},
+		"category": "/csap/metrics/process/30/data",
+		"createdOn": {
+			"unixMs": 1549048154113,
+			"date": "2019-02-01",
+			"time": "14:09:14",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:14.133Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:14.113Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"dataKey": "5c54995aa92930410b2ceae9",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:14.133Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81ef"
+		},
+		"category": "/csap/reports/jmxCustom/daily",
+		"createdOn": {
+			"unixMs": 1549048153539,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.568Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.539Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 2811,
+					"TotalVmCpu": 25810,
+					"ProcessCpu": 1653,
+					"AdminPingsMeanMs": 1482188,
+					"linuxPsAndMatchMeanMs": 2596747,
+					"LogRotationMs": 49205,
+					"serviceDiskUsage": 3715363,
+					"publishEvents": 986,
+					"publishEventsMs": 5719755,
+					"SpringMvcRequests": 2703,
+					"JavaCollectionCounter": 3125,
+					"JmxCollectionMs": 41308,
+					"JmxCollectionFailures": 0,
+					"JmxCustomCollectionFailures": 0,
+					"CommandsSinceRestart": 111420706,
+					"OsCommandsCounter": 79173,
+					"OsCommandsMeanMs": 1328342,
+					"OsCommandsMaxTimeMs": 20480196,
+					"jmxHeartbeatMs": 2485
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 2811,
+					"TotalVmCpu": 25810,
+					"ProcessCpu": 8,
+					"SpringJmsListeners": 2819,
+					"SpringJmsCount": 0,
+					"SpringJmsCountPerSecond": 0,
+					"SpringJmsMedianTimeMs": 0,
+					"SpringJmsMaxMs": 0,
+					"SpringDbcpActive": 0,
+					"SpringDbcpIdle": 1252,
+					"DBAddItem": 0,
+					"DBAddItemMs": 0,
+					"DBShowItem": 0,
+					"DBShowItemMs": 0,
+					"jmxHeartbeatMs": 2829
+				},
+				{
+					"serviceName": "netmet-towers-service-1",
+					"numberOfSamples": 2811,
+					"messagesReceived": 0,
+					"messagesReceivedDelta": 0,
+					"messagesProcessed": 0,
+					"messagesProcessedDelta": 0
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.568Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81ed"
+		},
+		"category": "/csap/metrics/jmx/custom/netmet-towers-service-1/30/data",
+		"createdOn": {
+			"unixMs": 1549048153538,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.564Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.538Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"dataKey": "5c549959a92930410b2ceae8",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.564Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81ea"
+		},
+		"category": "/csap/metrics/jmx/custom/csap-verify-service_7011/30/data",
+		"createdOn": {
+			"unixMs": 1549048153538,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.560Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.538Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"dataKey": "5c549959a92930410b2ceae7",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.560Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81e7"
+		},
+		"category": "/csap/metrics/jmx/custom/csap-agent_8011/30/data",
+		"createdOn": {
+			"unixMs": 1549048153538,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.555Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.538Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"dataKey": "5c549959a92930410b2ceae6",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.555Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81e4"
+		},
+		"category": "/csap/reports/jmx/daily",
+		"createdOn": {
+			"unixMs": 1549048153537,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.551Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.537Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 2811,
+					"cpuPercent": 1653,
+					"tomcatConnections": 8587,
+					"httpRequestCount": 2704,
+					"httpProcessingTime": 1429714,
+					"httpKbytesReceived": 120,
+					"httpKbytesSent": 3670,
+					"sessionsCount": 5,
+					"sessionsActive": 397,
+					"openFiles": 419495,
+					"minorGcInMs": 126798,
+					"majorGcInMs": 0,
+					"heapUsed": 438699,
+					"heapMax": 721920,
+					"tomcatThreadsBusy": 80,
+					"tomcatThreadCount": 56400,
+					"jvmThreadCount": 225033,
+					"jvmThreadsMax": 233528
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 2811,
+					"cpuPercent": 8,
+					"tomcatConnections": 5638,
+					"httpRequestCount": 0,
+					"httpProcessingTime": 0,
+					"httpKbytesReceived": 0,
+					"httpKbytesSent": 0,
+					"sessionsCount": 0,
+					"sessionsActive": 0,
+					"openFiles": 276151,
+					"minorGcInMs": 352,
+					"majorGcInMs": 0,
+					"heapUsed": 365484,
+					"heapMax": 721920,
+					"tomcatThreadsBusy": 0,
+					"tomcatThreadCount": 56380,
+					"jvmThreadCount": 159312,
+					"jvmThreadsMax": 200161
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.551Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d48599f7c177516b81e2"
+		},
+		"category": "/csap/metrics/jmx/standard/30/data",
+		"createdOn": {
+			"unixMs": 1549048153537,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.546Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.537Z"
+			}
+		},
+		"host": "netmet-perf02",
+		"appId": "SensusCsap",
+		"counter": 29,
+		"dataKey": "5c549959a92930410b2ceae5",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.546Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Upload"
+	},
+	{
+		"_id": {
+			"$oid": "5c549959a92930410b2ceae4"
+		},
+		"category": "/csap/metrics/jmx/standard/30/attributes",
+		"summary": "Modified",
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"host": "netmet-perf02",
+		"createdOn": {
+			"unixMs": 1549048153536,
+			"date": "2019-02-01",
+			"time": "14:09:13",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:13.540Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:13.536Z"
+			}
+		},
+		"appId": "SensusCsap",
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:13.540Z"
+		},
+		"dataKey": "5c549959a92930410b2ceae3"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d2ef99f7c177516b7c65"
+		},
+		"category": "/csap/health",
+		"createdOn": {
+			"unixMs": 1549048151724,
+			"date": "2019-02-01",
+			"time": "14:09:11",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T19:09:11.728Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T19:09:11.724Z"
+			}
+		},
+		"host": "luna-store03",
+		"appId": "SensusCsap",
+		"counter": 170,
+		"data": {
+			"vm": {
+				"cpuCount": 16,
+				"cpuLoad": 0.0,
+				"host": "luna-store03",
+				"packageName": "Luna Store",
+				"capabilityName": "Luna Storage Cluster",
+				"lifecycle": "dev"
+			},
+			"Healthy": false,
+			"errors": {
+				"luna-store03": [
+					"luna-store03: k8s-calico-node: Network Connections: 261 sockets, Alert threshold: 30",
+					"luna-store03: k8s-proxy: Network Connections: 261 sockets, Alert threshold: 30",
+					"luna-store03: nginx-ingress-controller: Network Connections: 33 sockets, Alert threshold: 30",
+					"luna-store03: nginx-ingress-controller: OS File Handles: 1632 open, Alert threshold: 1000",
+					"luna-store03: glusterfs: OS Threads: 134, Alert threshold: 120"
+				],
+				"states": null
+			},
+			"services": {
+				"total": 20,
+				"active": 13
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:11.728Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c53d39299f7c177516b3e94"
+		},
+		"category": "/csap/reports/process/daily",
+		"createdOn": {
+			"unixMs": 1549048154114,
+			"date": "2019-01-31",
+			"time": "14:09:14",
+			"lastUpdatedOn": {
+				"$date": "2019-01-31T19:09:14.142Z"
+			},
+			"mongoDate": {
+				"$date": "2019-01-31T19:09:14.114Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 26,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "heron-ui-1",
+					"numberOfSamples": 183,
+					"topCpu": 5,
+					"threadCount": 294,
+					"fileCount": 1584,
+					"socketCount": 144,
+					"rssMemory": 3969,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "tiller-1",
+					"numberOfSamples": 183,
+					"topCpu": 3,
+					"threadCount": 4360,
+					"fileCount": 1064,
+					"socketCount": 152,
+					"rssMemory": 4707,
+					"diskUtil": 148,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "kubernetes-dashboard-1",
+					"numberOfSamples": 183,
+					"topCpu": 4,
+					"threadCount": 4370,
+					"fileCount": 942,
+					"socketCount": 157,
+					"rssMemory": 3447,
+					"diskUtil": 158,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "netmet-injestion-1",
+					"numberOfSamples": 183,
+					"topCpu": 15794,
+					"threadCount": 29870,
+					"fileCount": 42432,
+					"socketCount": 5919,
+					"rssMemory": 270386,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 1355
+				},
+				{
+					"serviceName": "prometheus-jmx-exporter-2",
+					"numberOfSamples": 180,
+					"topCpu": 0,
+					"threadCount": 5145,
+					"fileCount": 1584,
+					"socketCount": 2292,
+					"rssMemory": 10716,
+					"diskUtil": 147,
+					"diskReadKb": 0,
+					"diskWriteKb": 66
+				},
+				{
+					"serviceName": "heron-apiserver-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "prometheus-jmx-exporter-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 5390,
+					"fileCount": 1628,
+					"socketCount": 1811,
+					"rssMemory": 7819,
+					"diskUtil": 138,
+					"diskReadKb": 0,
+					"diskWriteKb": 82
+				},
+				{
+					"serviceName": "netmet-injestion-2",
+					"numberOfSamples": 180,
+					"topCpu": 1417,
+					"threadCount": 33930,
+					"fileCount": 47046,
+					"socketCount": 6297,
+					"rssMemory": 303857,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 722
+				},
+				{
+					"serviceName": "k8s-api-etcd-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 407063,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "heron-bookie-1",
+					"numberOfSamples": 183,
+					"topCpu": 1,
+					"threadCount": 23212,
+					"fileCount": 15408,
+					"socketCount": 432,
+					"rssMemory": 51658,
+					"diskUtil": 2192,
+					"diskReadKb": 0,
+					"diskWriteKb": 35
+				},
+				{
+					"serviceName": "docker",
+					"numberOfSamples": 183,
+					"topCpu": 620,
+					"threadCount": 7034,
+					"fileCount": 27009,
+					"socketCount": 1230,
+					"rssMemory": 16451,
+					"diskUtil": 0,
+					"diskReadKb": 0,
+					"diskWriteKb": 220712
+				},
+				{
+					"serviceName": "k8s-calico-etcd-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 407063,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "nginx-ingress-controller-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "cp-zookeeper-server-1",
+					"numberOfSamples": 183,
+					"topCpu": 8,
+					"threadCount": 10435,
+					"fileCount": 19897,
+					"socketCount": 2312,
+					"rssMemory": 20703,
+					"diskUtil": 148,
+					"diskReadKb": 0,
+					"diskWriteKb": 127
+				},
+				{
+					"serviceName": "csap-agent",
+					"numberOfSamples": 183,
+					"topCpu": 606,
+					"threadCount": 19107,
+					"fileCount": 24267,
+					"socketCount": 1373,
+					"rssMemory": 175887,
+					"diskUtil": 20665,
+					"diskReadKb": 1062,
+					"diskWriteKb": 70292
+				},
+				{
+					"serviceName": "kubelet",
+					"numberOfSamples": 183,
+					"topCpu": 420,
+					"threadCount": 7929,
+					"fileCount": 5453,
+					"socketCount": 2306,
+					"rssMemory": 16673,
+					"diskUtil": 2467,
+					"diskReadKb": 0,
+					"diskWriteKb": 9
+				},
+				{
+					"serviceName": "k8s-calico-node-1",
+					"numberOfSamples": 183,
+					"topCpu": 168,
+					"threadCount": 12609,
+					"fileCount": 11885,
+					"socketCount": 22977,
+					"rssMemory": 6682,
+					"diskUtil": 28896,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "k8s-api-server-1",
+					"numberOfSamples": 183,
+					"topCpu": 0,
+					"threadCount": 0,
+					"fileCount": 0,
+					"socketCount": 0,
+					"rssMemory": 0,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				},
+				{
+					"serviceName": "cp-kafka-broker-1",
+					"numberOfSamples": 183,
+					"topCpu": 166,
+					"threadCount": 15328,
+					"fileCount": 30537,
+					"socketCount": 1773,
+					"rssMemory": 85121,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 221
+				},
+				{
+					"serviceName": "csap-verify-service",
+					"numberOfSamples": 183,
+					"topCpu": 107,
+					"threadCount": 14928,
+					"fileCount": 17033,
+					"socketCount": 793,
+					"rssMemory": 121242,
+					"diskUtil": 12960,
+					"diskReadKb": 0,
+					"diskWriteKb": 172
+				},
+				{
+					"serviceName": "heron-tracker-1",
+					"numberOfSamples": 183,
+					"topCpu": 5,
+					"threadCount": 735,
+					"fileCount": 2160,
+					"socketCount": 144,
+					"rssMemory": 4849,
+					"diskUtil": 137,
+					"diskReadKb": 0,
+					"diskWriteKb": 0
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T19:09:14.142Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Summary Report"
+	},
+	{
+		"_id": {
+			"$oid": "5c58439f20a8bc3016b25ebf"
+		},
+		"category": "/csap/reports/health",
+		"createdOn": {
+			"unixMs": 1549288351133,
+			"date": "2019-02-01",
+			"time": "08:52:31",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T13:52:31.149Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T13:52:31.133Z"
+			}
+		},
+		"host": "centos1",
+		"appId": "SensusCsap",
+		"data": {
+			"vm": {
+				"cpuCount": 4,
+				"cpuLoad": 2.1,
+				"host": "centos1",
+				"packageName": "default",
+				"capabilityName": "Sensus Starter",
+				"lifecycle": "dev"
+			},
+			"services": {
+				"total": 7,
+				"active": 4
+			},
+			"UnHealthyEventCount": 69,
+			"healthStatus": [
+				{
+					"time": "08:52:31",
+					"status": [
+						"centos1: csap-verify-service: Application Heartbeat failure. Review health report: http://centos1:7011/csap-verify-service/csap/health",
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Process CPU: 156%, Alert threshold: 20"
+					]
+				},
+				{
+					"time": "08:57:32",
+					"status": [
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:03:14",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:38:23",
+					"status": [
+						"centos1: csap-verify-service: Application Heartbeat failure. Review health report: http://centos1:7011/csap-verify-service/csap/health",
+						"centos1: csap-demo-tomcat: java heartbeat is enabled but not detected using jvmThreadCount",
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:43:24",
+					"status": [
+						"centos1: docker: Disk Writes: 5232Kb/s, Alert threshold: 50",
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:48:25",
+					"status": [
+						"centos1: docker: Disk Writes: 101Kb/s, Alert threshold: 50",
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:53:26",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "12:58:27",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs."
+					]
+				},
+				{
+					"time": "13:03:28",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:08:29",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:13:30",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:18:31",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs."
+					]
+				},
+				{
+					"time": "13:23:32",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:28:33",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:38:41",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs."
+					]
+				},
+				{
+					"time": "13:43:42",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:48:43",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: kubelet: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs."
+					]
+				},
+				{
+					"time": "13:53:45",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				},
+				{
+					"time": "13:58:46",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs."
+					]
+				},
+				{
+					"time": "14:03:47",
+					"status": [
+						"centos1: csap-demo-nginx: no active OS process found, and no user stop was issued. Probable crash or runaway resource kill: review logs.",
+						"centos1: csap-agent: Application Heartbeat failure. Review health report: http://centos1.lab.sensus.net:8011/csap-agent/csap/health"
+					]
+				}
+			]
+		},
+		"expiresAt": {
+			"$date": "2020-02-01T13:52:31.149Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Health Data"
+	},
+	{
+		"_id": {
+			"$oid": "5c57d12e20a8bc3016b14190"
+		},
+		"category": "/csap/reports/logRotate",
+		"createdOn": {
+			"unixMs": 1549311224514,
+			"date": "2019-02-01",
+			"time": "15:13:44",
+			"lastUpdatedOn": {
+				"$date": "2019-02-01T20:13:44.520Z"
+			},
+			"mongoDate": {
+				"$date": "2019-02-01T20:13:44.514Z"
+			}
+		},
+		"host": "csap-dev11",
+		"appId": "SensusCsap",
+		"counter": 2,
+		"data": {
+			"summary": [
+				{
+					"serviceName": "csap-verify-service",
+					"Count": 0,
+					"MeanSeconds": 0,
+					"TotalSeconds": 0
+				},
+				{
+					"serviceName": "csap-agent",
+					"Count": 0,
+					"MeanSeconds": 0,
+					"TotalSeconds": 0
+				}
+			],
+			"Total": {
+				"Count": 1,
+				"MeanSeconds": 2,
+				"TotalSeconds": 2
+			}
+		},
+		"expiresAt": {
+			"$date": "2020-02-04T20:13:44.520Z"
+		},
+		"lifecycle": "dev",
+		"project": "CSAP Platform",
+		"summary": "Daily Summary"
+	}
+]

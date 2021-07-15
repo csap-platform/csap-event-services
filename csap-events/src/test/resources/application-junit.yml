@@ -1,0 +1,47 @@
+#
+#  ================ profile: junit
+#
+#   - Note: references used in code base
+#
+
+spring: 
+
+  profiles: junit
+  
+  cache:
+      type: none  # cachemanager lifecycles will impact, so disable
+csap:
+  info:
+    load-balancer-url: "${csapLbUrl:http://localhost:8080}"
+
+  web-server.enabled: false
+  
+  security: 
+    enabled: false
+    ldap-enabled: false   # requires csapSecurity.properties in your home dir 
+    rest-api-filter:
+      enabled: false
+        
+csap-events:
+
+  mongo-config:
+    hosts: "${mongoHosts:127.0.0.1}"
+    port: -1
+    user: dataBaseReadWriteUser
+    password: password
+    user-db: "${mongoUserDb:admin}"
+
+  health-monitoring:
+  
+    # all times are * 10 for junits to avoid messy output
+    intervals-ms:
+      members: 300000
+      search: 600000
+      metrics: 300000
+      
+    appIds:
+       - SensusCsap
+    lifes:
+        - dev
+    event-data-service-context: /events
+    event-analytic-service-context: /events

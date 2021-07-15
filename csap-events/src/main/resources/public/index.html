@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="css/csap.css" type="text/css"
+	media="screen">
+
+<style>
+table.simple {
+	width: 80em;
+	margin-bottom: 3em;
+}
+
+table.simple td:nth-child(1) {
+	width: 15em;
+}
+
+table.simple td:nth-child(2) {
+	width: 5em;
+}
+</style>
+</head>
+
+<body>
+
+	<header> CSAP: Boot Reference Application Tests ---</header>
+	
+		<table class="simple">
+		<thead>
+			<tr>
+				<th><div class="title">Boot Actuator Op Links</div> Click to
+					test</th>
+				<th>returns</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr>
+				<td><a class="simple" href="info">info</a></td>
+				<td>html</td>
+				<td>info</td>
+			</tr>
+
+			<tr>
+				<td><a class="simle" href="autoconfig">autoconfig</a></td>
+				<td>text</td>
+				<td>autoconfig</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="beans">beans</a></td>
+				<td>text</td>
+				<td>beans</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="env">env</a></td>
+				<td>html</td>
+				<td>env</td>
+			</tr>
+			
+			<tr>
+				<td><a class="simple" href="health">health</a></td>
+				<td>html</td>
+				<td>health</td>
+			</tr>
+			
+			<tr>
+				<td><a class="simple" href="metrics">metrics</a></td>
+				<td>html</td>
+				<td>metrics</td>
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+	<table class="simple">
+		<thead>
+
+			<tr>
+				<th><div class="title">Model View Controller</div> Click to
+					test</th>
+				<th>returns</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr>
+				<td><a class="simple" href="simpleView">simpleView</a></td>
+				<td>html</td>
+				<td>SpringBoot View using Thymeleaf html5 template</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="currentTime">currentTime</a></td>
+				<td>text</td>
+				<td>Spring MVC returning plain text</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="addSessionVar">addSessionVar</a></td>
+				<td>text</td>
+				<td>Spring MVC with session variable; note embedded tomcat can
+					optional persist over restarts, or distribute for stateless containers via redis</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="testAclFailure">testAclFailure</a></td>
+				<td>html</td>
+				<td>Spring Security - verify ACL deny message</td>
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+	<table id="csap" class="simple">
+		<thead>
+
+			<tr>
+				<th><div class="title">Csap Configuration</div> Click to test</th>
+				<th>returns</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr>
+				<td><a class="simple" href="performance/">performance</a></td>
+				<td>html</td>
+				<td>Java Simon Performance Dashboard</td>
+			</tr>
+
+
+			<tr>
+				<td><a class="simple" href="csapInfo">csapInfo</a></td>
+				<td>json</td>
+				<td>CSAP Environment variables, JEE Properties, etc.</td>
+			</tr>
+
+
+
+
+		</tbody>
+
+	</table>
+
+	<table id="csap service Locator" class="simple">
+		<thead>
+
+			<tr>
+				<th><div class="title">CSAP Service Locator</div> Click to test</th>
+				<th>returns</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr>
+				<td><a class="simple" href="hello">hello</a></td>
+				<td>text</td>
+				<td>Invoke instance in current JVM</td>
+			</tr>
+
+
+			<tr>
+				<td><a class="simple" href="helloRemoteRandom">hello:
+						remote random</a></td>
+				<td>text</td>
+				<td>Invoke instance in remote JVM, *Best Distribution</td>
+			</tr>
+
+
+			<tr>
+				<td><a class="simple" href="helloRoundRobin">hello: remote
+						round robin</a></td>
+				<td>text</td>
+				<td>Invoke instance in remote JVM, iterates available instances</td>
+			</tr>
+
+
+			<tr>
+				<td><a class="simple" href="hello/lowCpu">hello: remote low
+						Cpu</a></td>
+				<td>text</td>
+				<td>Invoke instance in remote JVM, lowest cpu usage of
+					available instances</td>
+			</tr>
+
+
+			<tr>
+				<td><a class="simple" href="hello/lowLoad">hello: remote
+						low load</a></td>
+				<td>text</td>
+				<td>Invoke instance in remote JVM, lowest cpu load of available
+					instances</td>
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+
+	<table id="springActuator" class="simple">
+		<thead>
+
+			<tr>
+				<th><div class="title">Spring Boot Actuator</div> Click to test</th>
+				<th>returns</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td><a class="simple" href="admin/info">admin/info</a></td>
+				<td>text</td>
+				<td>Contents of the info element configured in application.yml/.properties. Can be any arbitrary data of value to team.</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/env">admin/env</a></td>
+				<td>text</td>
+				<td>Environment</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/configprops">admin/configprops</a></td>
+				<td>text</td>
+				<td>Environment</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/health">admin/health</a></td>
+				<td>text</td>
+				<td>Shows application health information (when the application is secure, a simple ‘status’ when accessed over an unauthenticated connection or full message details when authenticated)</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/metrics">admin/metrics</a></td>
+				<td>text</td>
+				<td>Metrics</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/beans">admin/beans</a></td>
+				<td>text</td>
+				<td>Displays a complete list of all the Spring beans in your application.</td>
+			</tr>
+	
+			<tr>
+				<td><a class="simple" href="admin/mappings">admin/mappings</a></td>
+				<td>text</td>
+				<td>Displays a collated list of all @RequestMapping paths.</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/dump">admin/dump</a></td>
+				<td>text</td>
+				<td>thread dump</td>
+			</tr>
+
+			<tr>
+				<td><a class="simple" href="admin/trace">admin/trace</a></td>
+				<td>text</td>
+				<td>Displays trace information (by default the last few HTTP requests).</td>
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+
+</body>
+
+</html>

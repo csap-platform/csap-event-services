@@ -1,0 +1,40 @@
+
+logging.config: classpath:log4j2-desktop.yml
+
+#
+#  ================ profile: desktop
+# update this in application-localhost.yml or application-company.yml  
+#
+server:
+  servlet:
+    context-path: /events-service
+
+spring:
+  cache:
+    type: none  
+
+csap:
+  security:
+    enabled: true
+#  encryptable-properties: 
+#    algorithm: PBEWITHMD5ANDDES
+
+csap-events:
+
+  mongo-config:
+    hosts: "localhost"
+    password: "localhostpassword"
+    
+  health-monitoring: 
+  
+    # all times are * 10 for desktop to avoid messy output
+    intervals-ms:
+      members: 300000
+      search: 600000
+      metrics: 300000
+      
+    appIds:
+      - applicationId1
+    lifes:
+      - dev
+      

@@ -1,0 +1,19 @@
+{
+        "category" : "/csap/system/memory/low",
+        "createdOn" : {
+                "unixMs" : 1412719971751,
+                "date" : "2014-10-07",
+                "time" : "17:12:51"
+                
+        },
+        "host" : "fact-dev09",
+        "summary" : "872 Remaining",
+        "lifecycle" : "dev",
+        "project" : "SNTC and PSS",
+        "data" : {
+                "currentFree" : 872,
+                "configuredMinimum" : 1000,
+                "csapText" : "Executing OS command on host fact-dev09:[bash, -c, free -g]"
+        }        
+}
+

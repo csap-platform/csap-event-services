@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>CSAP Adoption</title>
+
+
+<script th:replace="~{ csap/fragments/csap-common-includes :: pageContent }"></script>
+
+<script th:replace="csap/fragments/flot-includes :: pageContent"></script>
+<script th:src="@{/webjars/flot/4.2.2/source/jquery.flot.pie.js}" ></script> 
+<!-- versioned independently 
+<script th:src="@{/webjars/flot/0.8.3/jquery.flot.pie.js}"></script>
+-->
+
+<script th:inline="javascript">
+			var api = [[   @{ ${"/api"}    }   ]];
+			var baseUrl = [[@{ ${"/"}}]];
+			$.ajaxSetup({
+			cache : false,
+					traditional : true
+			});
+			var globalLife = [[ ${ @csapInformation.getLifecycle() } ]];
+
+		</script>
+<script th:src="@{/js/modules/projects/adoption.js}"></script>
+
+
+<link
+	th:href="@{ ${@mvcResourceUrlProvider.getForLookupPath('/css/adoption.css')} }"
+	rel="stylesheet"
+	type="text/css"
+	media="screen" />
+
+</head>
+
+
+<body class="csap-full csap-scrollable theme-light theme-xylem">
+
+	<header th:replace="csap/fragments/page :: header"></header>
+
+
+	<article class=content>
+
+		<div id=summary-header>
+
+			<button
+				class="csap-button"
+				id="metrics-collection-button">
+				Explore
+				<span>-- days stored</span>
+			</button>
+
+			<div>
+
+				<div class="row">
+					<div class="group">
+						<div class="summlabel">Projects</div>
+						<div
+							class="value"
+							id="projects"></div>
+					</div>
+
+
+					<div class="group">
+						<div class="summlabel">Hosts &nbsp;&nbsp;&nbsp;(Cpus)</div>
+						<div
+							class="value"
+							id="hosts"></div>
+					</div>
+
+					<div
+						class="group"
+						title="In Billions"
+						id="hostDataPoints">
+						<div class="summlabel">Host Metrics</div>
+						<div
+							class="value"
+							id="hostData"></div>
+						<div class="billions">* in Billions</div>
+					</div>
+
+					<div class="group">
+						<div class="summlabel">Engineers</div>
+						<div
+							class="value"
+							id="users"></div>
+					</div>
+
+
+				</div>
+
+				<div class="row">
+					<div
+						class="group"
+						title="Number of unique service offerings">
+						<div class="summlabel">Services</div>
+						<div
+							class="value"
+							id="services"></div>
+					</div>
+
+					<div
+						class="group"
+						title="Number of linux processes">
+						<div class="summlabel">Instances</div>
+						<div
+							class="value"
+							id="instances"></div>
+					</div>
+
+					<div
+						class="group"
+						title="In Billions"
+						id="serviceDataPoints">
+						<div class="summlabel">Service Metrics</div>
+						<div
+							class="value"
+							id="serviceData"></div>
+						<div class="billions">* in Billions</div>
+					</div>
+
+					<div class="group">
+						<div class="summlabel">Eng. Activity</div>
+						<div
+							class="value"
+							id="userActivity"></div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+		
+
+
+		<div id=pie-chart-nav>
+
+
+			<div>
+				<label
+					title="Show Projects with a minimum host count"
+					style="font-weight: bold">
+					Filter:
+					<input
+						value="1"
+						title="Display only projects with a minimum host count"
+						id="minimumHosts" />
+				</label>
+				<br/>
+				<label class=csap>Legend</label>
+				<div id=adoption-chart-legend></div>
+			</div>
+
+		
+			<div id=pie-chart-containers>
+	
+				<section class="graph">
+					<div class="graphLabel">Hosts</div>
+					<div class=pie-chart
+						id="hostsPieChart"
+						></div>
+					
+				</section>
+	
+				<section class="graph">
+					<div class="graphLabel">Cpus</div>
+					<div class=pie-chart
+						id="cpuPieChart"
+						></div>
+					
+				</section>
+	
+				<section class="graph">
+					<div class="graphLabel">Service Types</div>
+					<div class=pie-chart
+						id="servicesPieChart"
+						></div>
+					
+				</section>
+				<section class="graph">
+					<div class="graphLabel">Services Deployed (All Types)</div>
+					<div class=pie-chart
+						id="serviceInstancesPieChart"
+						></div>
+					
+				</section>
+	
+				<section class="graph">
+					<div class="graphLabel">Engineers</div>
+					<div class=pie-chart
+						id="userPieChart"
+						></div>
+					
+				</section>
+				
+				<section class="graph">
+					<div class="graphLabel">Engineering Activity</div>
+					<div class=pie-chart
+						id="userActivityPieChart"
+						></div>
+					
+				</section>
+			</div>
+		</div>
+
+	</article>
+
+
+	<footer th:replace="csap/fragments/page :: footer"></footer>
+
+</body>
+</html>

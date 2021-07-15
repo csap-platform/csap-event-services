@@ -1,0 +1,33 @@
+
+
+
+
+spring:
+
+  profiles:
+ 
+    active: desktop,localhost
+    
+    
+  config:
+    import:
+      - boot-csap-defaults.yml
+      - boot-app-defaults.yml
+
+
+##
+## Loads default settings for spring services and csap
+## Profiles:
+##   - desktop
+##    
+#
+#spring:
+#
+#  profiles:
+#  
+#    active: desktop,localhost # Override using --spring.profiles.active=xxx,yyy,zzz
+#    include: 
+#    - csap-defaults
+#    - app-defaults
+
+ 

@@ -1,0 +1,71 @@
+{        
+        "category" : "/csap/reports/global/daily",
+        "createdOn" : {
+                "unixMs" : 1429679700601,
+                "date" : "2015-04-22",
+                "time" : "0-15-0"                
+        },
+        "summary" : "Global Analytics Summary",
+        "lifecycle" : "dev",
+        "project" : "CsapData",
+        "appId" : "csapeng.gen",
+        "host" : "csap-dev01",
+        "data" : [
+                {
+                        "projectName" : "CSAP Desktop",
+                        "deploymentName" : "DesktopCsap",
+                        "csapVersion" : "Desktop",
+                        "appId" : "csaprest.gen",
+                        "vms" : 10,
+                        "serviceCount" : 17,
+                        "instanceCount" : 37,
+                        "cpuCount" : 8,
+                        "totalLoad" : 7,
+                        "numSamples" : 6,
+                        "activeUsers" : 2,
+                        "totalActivity" : 15
+                },
+                {
+                        "projectName" : "total",
+                        "deploymentName" : null,
+                        "csapVersion" : null,
+                        "appId" : null,
+                        "vms" : 10,
+                        "serviceCount" : 50,
+                        "instanceCount" : 115,
+                        "cpuCount" : 40,
+                        "totalLoad" : 2142.88,
+                        "numSamples" : 12114,
+                        "activeUsers" : 6,
+                        "totalActivity" : 348
+                },
+                {
+                        "projectName" : "Sample Release Package 2",
+                        "deploymentName" : "CSAP Development",
+                        "csapVersion" : "3.7.0-SNAPSHOT",
+                        "appId" : "csapeng.gen",
+                        "vms" : 1,
+                        "serviceCount" : 5,
+                        "instanceCount" : 5,
+                        "cpuCount" : 4,
+                        "totalLoad" : 73.88,
+                        "numSamples" : 2666,
+                        "activeUsers" : 1,
+                        "totalActivity" : 23
+                },
+                {
+                        "projectName" : "CSAP Engineering",
+                        "deploymentName" : "CSAP Development",
+                        "csapVersion" : "3.7.0-SNAPSHOT",
+                        "appId" : "csapeng.gen",
+                        "vms" : 4,
+                        "serviceCount" : 28,
+                        "instanceCount" : 73,
+                        "cpuCount" : 28,
+                        "totalLoad" : 2069,
+                        "numSamples" : 9442,
+                        "activeUsers" : 3,
+                        "totalActivity" : 310
+                }
+        ]
+}

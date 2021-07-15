@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Csap Data</title>
+<link rel="stylesheet" href="css/csap.css" type="text/css"
+	media="screen">
+
+<style type="text/css">
+article{
+	width: 30em;
+	display: inline-block;
+	vertical-align: top;	
+}
+.main{
+   height: 300px;
+   
+}
+</style>
+</head>
+<body>
+
+
+	<header> Csap Data : - Version:  </header>
+	<article class="">
+		<div class="title">Events</div>
+		<a class="pushButton" href="./api/event">Event API</a>
+		<a class="pushButton" href="events">All Events</a><br>
+		<a class="pushButton" href="events?category=/csap/ui">Ui events</a>
+		<a class="pushButton" href="events?category=/csap/ui/svc&jvmName=CsAgent_8011">Ui events With Jvm</a>
+		<a class="pushButton" href="events?category=/csap/ui/svc&appId=SensusCsap">Ui events With App Id</a><br>
+		<a class="pushButton" href="events?category=/csap/ui&life=dev">Ui Dev events</a><br>
+	</article>
+	<article class="">
+		<div class="title">Events Rest</div>
+		 <a class="pushButton" href="api/event?search[value]=simpleSearchText=/*">All Events</a>
+		 <a class="pushButton" href="api/event?search[value]=simpleSearchText=/csap/health">Health Events </a><br>
+		 <a class="pushButton" href="api/event?search[value]=simpleSearchText=/csap/ui">UI Events </a><br>
+		<a class="pushButton" href="api/event?search[value]=simpleSearchText=/csap/metrics/*">Metrics Events </a><br>			
+		 <a class="pushButton" href="api/event?search[value]=simpleSearchText=/csap/System/*">System Events </a><br>
+		 
+		 
+		 
+		 <a class="pushButton" href="api/health">Health </a><br>
+		 <a class="pushButton" href="api/event/latest?category=/csap/health&appId=SensusCsap&life=dev">Latest event </a><br>
+		 <a class="pushButton" href="api/event/appIds">AppIds </a><br>
+		 <a class="pushButton" href="api/event/lifecycles?appId=SensusCsap">Life cycles </a><br>
+		 <a class="pushButton" href="api/event/count?appId=SensusCsap">Count </a><br>
+		 <a class="pushButton" href="api/event/logRotateReport?appId=SensusCsap">Log Rotate Report </a><br>
+		 		 
+	</article>
+	<article class="">
+		<div class="title">Metrics Rest</div>
+		<a class="pushButton" href="api/metrics?type=data&length=10">Metrics Data </a><br>
+		<a class="pushButton" href="api/metrics?type=attributes&length=10">Metrics Attributes </a><br>
+	</article>
+	<article>
+		<div class="title">Misc</div>
+		<a class="pushButton" href="./stats">DB Stats</a>
+		<a class="pushButton" href="javasimon-console/">Java Metrics Simon</a>
+		
+	</article>
+</body>
+</html>

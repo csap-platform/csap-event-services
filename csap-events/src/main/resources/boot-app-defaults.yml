@@ -1,0 +1,148 @@
+
+spring:
+  cache:
+    jcache:
+      config: "classpath:ehcache3.xml"
+    
+csap-events:
+
+  host-url-pattern: "${hostUrlPattern:http://CSAP_HOST.lab.sensus.net:8011}"
+  
+  max-health-changes-per-day: 30
+
+  health-monitoring:
+#    intervals-ms:
+#      members: 30000
+#      search: 60000
+#      metrics: 30000
+    appIds:
+      - applicationId1 
+    lifes:
+      - dev
+    event-data-service-context: /events-service 
+    event-analytic-service-context: /events-service 
+    user-event-idle-days: 3
+      
+  mongo-config:
+    stand-alone: true
+    hosts: "${mongoHosts}"
+    port: "${mongoPort:27017}"
+    user: "${mongoUser:dataBaseReadWriteUser}"
+    password: "${mongoPassword}"
+    user-db: "${mongoUserDb:admin}"
+    
+  data-connection: 
+    url: "${dataServiceUrl:/events-service/api/event}"
+    user: "${dataServiceUser}"
+    pass: "${dataServicePass}"
+  
+
+csap: 
+  security:
+    rest-api-filter:
+      enabled: true
+      token: ${restToken:demoToken}
+      urls:
+        - "/api/*"
+      cache-seconds: 3600
+  
+  performance:
+    monitor-urls: 
+        - /
+        - /api/report/*
+        - /api/event/*
+
+    alert:
+      debug: false
+      remember-count: ${csapMaxBacklog:1000}
+      
+      notify:
+        addresses: "${csapAddresses:disabled}"
+        frequency: "${csapFrequency:4}"
+        time-unit: "${csapTimeUnit:HOURS}"
+        email-time-out-ms: 500
+        
+      limits: 
+        - 
+          id: health.exceptions
+          ignore-null: true
+          occurences-max: 2
+          collect-time: 1
+          collect-units: MINUTES
+          
+         # getting performance data 
+        - 
+          id: csap.metrics-get
+          mean-time:  1000
+          mean-units: MILLISECONDS
+          max-time: 10
+          max-units: SECONDS
+          collect-time: 1
+          collect-units: MINUTES
+          
+          # getting report data
+        - 
+          id: csap.reports-trend
+          ignore-null: true
+          max-time: 3
+          max-units: SECONDS
+          
+           # event browser - paginated events
+        - 
+          id: csap.event.get
+          ignore-null: true
+          max-time: 6
+          max-units: SECONDS
+          
+          # event browser - search filters
+        - 
+          id: csap.event.search-filters
+          ignore-null: true
+          max-time: 10
+          max-units: SECONDS
+          
+        - 
+          id: searchFilters.errors
+          ignore-null: true
+          occurences-max: 0
+          
+          # event browser - matching event counts
+        - 
+          id: http.data.api.event.filteredCount.GET
+          ignore-null: true
+          max-time: 3
+          max-units: SECONDS
+          
+        - 
+          id: addEvent.insert
+          ignore-null: true
+          mean-time:  1000
+          mean-units: MILLISECONDS
+          max-time: 5
+          max-units: SECONDS
+        - 
+          id: addEvent.insert.performance.data
+          ignore-null: true
+          mean-time:  200
+          mean-units: MILLISECONDS
+          max-time: 10
+          max-units: SECONDS
+        - 
+          id: addEvent.insert.performance.summary.report
+          ignore-null: true
+          mean-time:  500
+          mean-units: MILLISECONDS
+          max-time: 10
+          max-units: SECONDS
+          
+        
+        
+  locator:
+    enabled: true
+    active-urls-locator: "${csapLbUrl:https://csap-secure.yourcompany.com}/admin/api/service/urls/active/"
+    low-resources-url-locator: "${csapLbUrl:https://csap-secure.yourcompany.com}/admin/api/service/url/low/"
+    low-resource: "lowCpu"  #lowLoad, lowCpu, ...
+    
+  
+  
+  

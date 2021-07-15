@@ -1,0 +1,27 @@
+[
+		{
+			"project": "CSAP Engineering",
+			"displayName": "CSAP Engineering",
+			"hidden": false,
+			"health": [
+				"dev",
+				"prod"
+			]
+		},
+		{
+			"project": "CSTG Platform",
+			"displayName": "CSAP Dev Lab",
+			"hidden": true,
+			"health": [
+				"dev"
+			]
+		},
+		{
+			"project": "CSAP Desktop",
+			"displayName": "Desktop",
+			"hidden": false,
+			"health": [
+				"dev"
+			]
+		}
+	]

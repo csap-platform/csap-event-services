@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+
+<head
+	th:fragment="pageContent"
+	th:remove="tag">
+
+
+<title>Adoption Trending</title>
+
+<script th:replace="~{ csap/fragments/csap-common-includes :: pageContent }"></script>
+
+<script th:replace="csap/fragments/flot-includes :: pageContent"></script>
+
+
+<script th:src="@{ js/modules/projects/trends.js }"></script>
+
+
+<link
+	th:href="@{/js/csapLibs/qtip/jquery.qtip.min.css}"
+	rel="stylesheet"
+	type="text/css"
+	media="screen" />
+<script th:src="@{/js/csapLibs/qtip/jquery.qtip.min.js}"></script>
+
+<script th:inline="javascript">
+			var api = [[   @{ ${"/api"}    }   ]];
+			var analyticsPortal = [[ ${ analyticsPortal } ]] ;
+			var baseUrl = [[@{ ${"/"}}]];
+			$.ajaxSetup({
+			cache : false,
+					traditional : true
+			});
+
+		</script>
+
+<style type="text/css">
+
+.legendLayer .background {
+	fill: rgba(255, 255, 255, 0.85);
+	stroke: rgba(0, 0, 0, 0.85);
+	stroke-width: 1;
+}
+
+#adoption-legend {
+	font-size: 16pt;
+	display: inline-block;
+	vertical-align: text-top;
+	margin-bottom: 1em;
+	margin-left: 3em;
+}
+
+.ui-widget {
+	font-size: 1em;
+}
+
+.linkField {
+	width: 25em;
+}
+
+.descField {
+	width: 10em;
+}
+
+.bordered th, .number {
+	text-align: center;
+}
+
+table {
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+.box {
+	display: none;
+	width: 100%;
+}
+
+.group {
+	display: inline-block;
+	width: 20em;
+}
+
+.ui-widget-content {
+	background: none;
+}
+
+.filters {
+	font-weight: bold;
+}
+
+#serviceHelpButton {
+	float: right;
+	font-size: 0.6em;
+	line-height: 1.5em;
+	margin-right: 3em;
+}
+
+.centered {
+	text-align: center;
+}
+
+tfoot {
+	border-top: 2px solid #808080;
+	font-weight: bold;
+	text-align: center;
+}
+
+section.graph {
+	background-color: white;
+	margin-bottom: 0;
+
+	margin-right: 1em;
+	position: relative;
+	margin-left: 0em;
+	margin-top: 10px;
+	padding: 1em;
+	border-radius: var(--border-radius-small);
+	padding: var(--small-padding);
+}
+
+.graphLabel {
+	font-weight: bold;
+	font-size: 20pt;
+}
+
+.analyticsLineGraph {
+	height: 200px;
+	margin: 0;
+	margin: 1em;
+	margin-top: 0.25em;
+	font-size: 16pt;
+}
+
+
+.showGraphs {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+.flot-tick-label {
+	color: #545454;
+	font-size: 0.7em;
+}
+
+#csapAdoptionTable td, #csapAdoptionTable th {
+	width: 6em;
+	text-align: right;
+	position: relative;
+}
+
+#csapAdoptionTable td:nth-child(1), #csapAdoptionTable th:nth-child(1) {
+	width: 1em;
+	padding: 0;
+	padding-left: 10px;
+}
+
+#csapAdoptionTable td:nth-child(2), #csapAdoptionTable th:nth-child(2),
+	#csapAdoptionTable td:nth-child(3), #csapAdoptionTable th:nth-child(3),
+	#csapAdoptionTable td:nth-child(4), #csapAdoptionTable th:nth-child(4),
+	#csapAdoptionTable td:nth-child(10), #csapAdoptionTable th:nth-child(10)
+	{
+	width: 15em;
+	text-align: left;
+}
+
+#csapActivityTable td, #csapActivityTable th {
+	width: 6em;
+	text-align: right;
+	position: relative;
+}
+
+#csapActivityTable td:nth-child(1), #csapActivityTable th:nth-child(1) {
+	width: 1em;
+	padding: 0;
+	padding-left: 10px;
+}
+
+#csapActivityTable td:nth-child(2), #csapActivityTable th:nth-child(2),
+	#csapActivityTable td:nth-child(3), #csapActivityTable th:nth-child(3),
+	#csapActivityTable td:nth-child(4), #csapActivityTable th:nth-child(4),
+	#csapActivityTable td:nth-child(9), #csapActivityTable th:nth-child(9)
+	{
+	width: 15em;
+	text-align: left;
+}
+</style>
+
+</head>
+</html>

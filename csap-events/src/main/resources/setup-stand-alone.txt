@@ -1,0 +1,49 @@
+
+Docker:
+mongo:latest
+Envs:
+"MONGO_INITDB_ROOT_USERNAME=dataBaseReadWriteUser",
+"MONGO_INITDB_ROOT_PASSWORD=password"
+
+[
+	{
+		"containerMount": "/data/configdb",
+		"hostPath": "/opt",
+		"readOnly": false,
+		"sharedUser": true
+	},
+	{
+		"containerMount": "/data/db",
+		"hostPath": "",
+		"readOnly": false,
+		"sharedUser": true
+	}
+]
+
+				"volumes": [
+					{
+						"containerMount": "/data/configdb",
+						"readOnly": false,
+						"sharedUser": false,
+						"hostPath": "mongo-config-volume",
+						"createPersistent": {
+							"enabled": true,
+							"driver": "local"
+						}
+					},
+					
+					{
+						"containerMount": "/data/db",
+						"readOnly": false,
+						"sharedUser": false,
+						"hostPath": "mongo-data-volume",
+						"createPersistent": {
+							"enabled": true,
+							"driver": "local"
+						}
+					}
+				],
+
+
+run config/csap-dbs
+

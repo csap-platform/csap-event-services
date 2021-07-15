@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Analytics Service</title> 
+
+		
+		
+		<script th:replace="~{ csap/fragments/libsAndStyles :: pageContent }"></script>
+
+		<script th:src="@{ js/modules/projects/health.js }" ></script>
+		
+
+
+		<style type="text/css">
+		.linkField {
+			width: 25em;
+		}
+		
+		.descField {
+			width: 10em;
+		}
+		
+		.bordered th, .number {
+			text-align: center;
+		}
+		
+		header {
+			text-align: left;
+			padding-left: 2em;
+			padding-right: 2em;
+			margin-bottom: 1em;
+		}
+		
+		table {
+			font-size: 0.8em;
+			display: inline-block;
+		}
+		
+		.errorMessage {
+			width: 50em;
+		}
+		</style>
+
+	</head>
+	<body>
+		<header>
+			<a th:href="@{/analytics}" class="csap-link-button">Csap Activity And Adoption Portal</a>
+			<div class="lifecycle"></div>
+	
+		</header>
+		<div id="csapHealthColumn" class="columnSelector" style="display: none"></div>
+		<table class="bordered iblock" id="healthTable">
+			<thead>
+				<tr>
+					<th style=""><a class="simple" href="#">Host</a></th>
+					<th style=""><a class="simple" href="#">Lifecycle</a></th>
+					<th style=""><a class="simple" href="#">Error Message</a></th>
+				</tr>
+			</thead>
+			<tbody id="healthBody">
+			</tbody>
+		</table>
+	</body>
+</html>

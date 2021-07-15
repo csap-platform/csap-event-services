@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<title th:replace="projects/trends-head :: pageContent">Adoption Details</title>
+</head>
+
+
+
+<body class="csap-full csap-scrollable theme-light theme-xylem">
+	<header>
+		<a
+			th:href="@{/analytics}"
+			class="csap-link-button">Csap Activity And Adoption Portal</a>
+			
+		<label style="padding-left: 4em">
+			Number of days:
+			<select
+				id="numDaysSelect"
+				style="width: 8em">
+				<option value="1">1 Day</option>
+				<option
+					value="7"
+					selected="selected">7 Days</option>
+				<option value="14">14 Days</option>
+				<option value="-1">All Days</option>
+			</select>
+		</label>
+
+
+		<a
+			title="Learn more about csap"
+			target="_blank"
+			class="csap-link-icon csap-help"
+			href="https://github.com/csap-platform/csap-core/wiki">CSAP</a>
+		<!--		
+			<label class="simple"> Show All:</label>
+			<input type="checkbox" id="showAdmin" />
+			-->
+	</header>
+
+
+	<article class=content>
+
+
+
+		<div
+			class="filters"
+			style="display: none;">
+
+
+			<label
+				class="resource"
+				style="margin-left: 2 em">User Activity : </label>
+			<input
+				type="number"
+				value=""
+				title="Filter metrics based on user activity"
+				id="userActivityCount"
+				style="width: 3em" />
+			<label
+				class="resource"
+				style="margin-left: 2 em">Load : </label>
+			<input
+				type="number"
+				value=""
+				title="Filter metrics based on load"
+				id="loadCount"
+				style="width: 3em" />
+		</div>
+
+
+
+		<div id="tabs">
+			<ul>
+				<li>
+					<a href="#tabs-1">Adoption Metrics</a>
+				</li>
+				<li>
+					<a href="#tabs-2">Activity Metrics</a>
+				</li>
+			</ul>
+			<div id="tabs-1">
+				<div
+					id="csapAdoptionColumn"
+					class="columnSelector"
+					style="display: none"></div>
+				<table
+					id="csapAdoptionTable"
+					class="reports csap">
+
+					<thead>
+						<tr>
+							<th style=""></th>
+							<th class="csapPack">Business Programs</th>
+							<th class="csapPack">Project Name</th>
+							<th class="col1">Csap Deployment</th>
+							<th class="num ">Engineers</th>
+							<th class="num ">Hosts</th>
+							<th class="num ">Cpus</th>
+							<th
+								class="num "
+								title="Memory allocated by not used">No of services</th>
+							<th
+								class="num "
+								title="Disk IO, as reported by linux mpstat">Service Instances</th>
+							<th
+								class="num"
+								title="Combined user and system cpu from mpstat">Csap version</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+
+					</tbody>
+
+					<tfoot>
+
+						<tr>
+							<td class="csapPack"></td>
+							<td
+								class="col1"
+								style="text-align: right"
+								data-math="col-count"
+								data-suffix=" Programs"
+								data-prefix=" Totals: "></td>
+							<td
+								class="num "
+								data-math="col-count"></td>
+							<td
+								class="num "
+								data-math="col-count"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num"
+								data-math="col-sum"></td>
+							<td class="num"></td>
+
+						</tr>
+					</tfoot>
+				</table>
+
+				<br />
+				<br />
+
+
+				<label style="padding-left: 1em;"> Trending: </label>
+
+				<select
+					id="trendingDaysSelect"
+					style="width: 8em">
+					<option value="7">1 Week</option>
+					<option value="14">2 Weeks</option>
+					<option value="28">4 Weeks</option>
+					<option
+						value="56"
+						selected="selected">8 Weeks</option>
+					<option value="112">16 Weeks</option>
+					<option value="224">32 Weeks</option>
+					<option value="-1">All</option>
+				</select>
+				
+				<div id=adoption-legend>
+				</div>
+
+
+				<section class="graph">
+					<div class="graphLabel">Engineers</div>
+					<div
+						id="usersGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+
+				<section class="graph">
+					<div class="graphLabel">Hosts</div>
+					<div
+						id="hostsGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+
+				<section class="graph">
+					<div class="graphLabel">Services</div>
+					<div
+						id="servicesGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+
+				<section class="graph">
+					<div class="graphLabel">Instances</div>
+					<div
+						id="instancesGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+
+			</div>
+
+
+
+
+
+			<div id="tabs-2">
+				<div
+					id="csapActivityColumn"
+					class="columnSelector"
+					style="display: none"></div>
+				<table
+					id="csapActivityTable"
+					class="reports csap">
+
+					<thead>
+						<tr>
+							<th style=""></th>
+							<th class="csapPack">Business Programs</th>
+							<th class="csapPack">Project Name</th>
+							<th class="col1">Csap Deployment</th>
+							<th class="num ">User activity</th>
+							<th class="num ">Total Load</th>
+							<th class="num ">Avg Load</th>
+							<th class="num ">Cpus</th>
+							<th class="num ">Health</th>
+						</tr>
+					</thead>
+
+					<tbody></tbody>
+
+					<tfoot>
+
+						<tr>
+							<td class="csapPack"></td>
+							<td
+								class="col1"
+								style="text-align: right"
+								data-math="col-count"
+								data-suffix=" Programs"
+								data-prefix=" Totals: "></td>
+							<td
+								class="num "
+								data-math="col-count"></td>
+							<td
+								class="num "
+								data-math="col-count"></td>
+							<td
+								class="num "
+								data-math="col-count"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td
+								class="num "
+								data-math="col-sum"></td>
+							<td class="num"></td>
+
+						</tr>
+					</tfoot>
+				</table>
+
+
+				<br />
+				<section class="graph">
+					<div class="graphLabel">Eng Activity</div>
+					<div
+						id="userActivityGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+				<section class="graph">
+					<div class="graphLabel">Load</div>
+					<div
+						id="resource_30Graph"
+						class="analyticsLineGraph"></div>
+				</section>
+				<section class="graph">
+					<div class="graphLabel">Cpus</div>
+					<div
+						id="cpusGraph"
+						class="analyticsLineGraph"></div>
+				</section>
+			</div>
+
+		</div>
+
+	</article>
+
+
+	<footer th:replace="csap/fragments/page :: footer"></footer>
+</body>
+</html>

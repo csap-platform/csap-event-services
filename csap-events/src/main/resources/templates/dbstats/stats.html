@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<script th:replace="csap/fragments/libsAndStyles :: pageContent"></script>
+
+		<title>Csap Data- Stats</title>
+		<link th:href="@{/js/csapLibs/qtip/jquery.qtip.min.css}" rel="stylesheet" type="text/css" media="screen" />
+		<script th:src="@{/js/csapLibs/qtip/jquery.qtip.min.js}"></script>
+
+
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+			var eventApi = [[@{ ${"/api/event"}}]];
+			/*]]>*/
+		</script>
+
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+			var api = [[@{ ${"/api"}}]];
+			/*]]>*/
+		</script> 
+		<script th:src="@{/js/dbstats/stats.js}" ></script>
+
+		<style>
+			header {
+				text-align: left;
+				padding-left: 2em;
+				padding-right: 2em;
+				margin-bottom: 1em;
+			}
+
+			input {
+				margin-right: 1em;
+			}
+
+			.pushButton {
+				min-width: 15em;
+				font-size: 1em;
+			}
+
+			table {
+				font-size: 0.8em;
+				display: inline-block;
+			}
+
+			.pushButton {
+				min-width: 5em;
+			}
+
+			table {
+				margin: 2em;
+			}
+			td  div{
+				max-height: 5em;
+				display: block;
+				overflow-y: auto;
+			}
+
+			td:nth-child(1) {
+				min-width: 10em;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<a href="test" class="simple" style="display: inline">CSAP Data Tests</a> 
+			
+			<label style="padding-left: 4em"> 
+				Mongo Db
+				Name: <select id="dbSelect" SIZE="1" style="width: 13em">
+				</select>
+
+			</label>
+			
+			<label style="padding-left: 1em"> Collection Name: </label> <select
+				id="colSelect" SIZE="1" style="width: 13em">
+			</select>
+		</header>
+		<div>
+			<table class="bordered  fixed" id="collStatusTable">
+				<thead>
+					<tr>
+						<th style="text-align: center;" colspan="3">Collection Stats <label
+								id="collectionName" /></th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Description</th>
+						<th style="text-align: left;">Primary Host</th>
+						<th>Secondary Host</th>
+					</tr>
+				</thead>
+				<tbody id="collStatusBody">
+
+				</tbody>
+
+			</table>
+
+			<table class="bordered  fixed" id="dbStatusTable">
+				<thead>
+					<tr>
+						<th style="text-align: center;" colspan="3">Db Stats <label
+								id="dbName" /></th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Description</th>
+						<th style="text-align: left;">Primary Host 
+
+							<a id="primaryStepDown" class="pushButton">Switch</a>
+
+						</th>
+						<th>Secondary Host</th>
+					</tr>
+				</thead>
+				<tbody id="dbStatusBody">
+
+				</tbody>
+
+			</table>
+
+			<table class="bordered  fixed" id="mongoOptionsTable">
+				<thead>
+					<tr>
+						<th style="text-align: center;" colspan="3">Mongo Client
+							Options</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Description</th>
+						<th style="text-align: left;">Options</th>
+					</tr>
+				</thead>
+				<tbody id="mongoOptionsBody">
+
+				</tbody>
+
+			</table>
+
+		</div>
+
+		<table id="loadingTemplate" style="display: none">
+
+			<tr >
+				<td colspan="99">
+					<div class="loadingLargePanel">
+						Retrieving mongo<br/>
+						configuration data
+					</div>
+				</td>
+			</tr>
+
+		</table>
+
+
+	</body>
+</html>

@@ -1,0 +1,25 @@
+aggregate { 
+	aggregate: "eventRecords", 
+	pipeline: [ 
+		{ $match: { 
+			appId: "csapssp.gen", lifecycle: "dev", 
+			createdOn.lastUpdatedOn: { $gte: new Date(1502368038226) }, 
+			category: /^/csap/ui// } }, 
+		{ $group: { _id: "$metaData.uiUser", totActivity: { $sum: 1 } } }, 
+		{ $project: { uiUser: "$_id", totActivity: "$totActivity", _id: 0 } } 
+	], 
+	cursor: {} }
+	
+	 planSummary: IXSCAN { appId: 1, lifecycle: 1, createdOn.date: -1 } keysExamined:3325399 docsExamined:3325399 cursorExhausted:1 numYields:26173 nreturned:49 reslen:2387 locks:{ Global: { acquireCount: { r: 52354 } }, Database: { acquireCount: { r: 26177 } }, Collection: { acquireCount: { r: 26176 } } } protocol:op_query 43535ms
+	 
+
+db.eventRecords.aggregate( [
+        { $match: { 
+        appId: "csapssp.gen",  project: "SNTC and PSS",
+        lifecycle: "dev",
+        category: { $regex: /^\/csap\/ui/ }, 
+        "createdOn.date": { $gte: "2017-08-09" } } },
+            // "createdOn.lastUpdatedOn": { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) } } },
+        { $group: { _id: "$metaData.uiUser", totActivity: { $sum: 1 } } }, 
+        { $project: { uiUser: "$_id", totActivity: "$totActivity", _id: 0 } } 
+        ],{  explain: false } );

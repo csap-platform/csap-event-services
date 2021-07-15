@@ -1,0 +1,44 @@
+// The critical index for trending queries
+db.eventRecords.createIndex({"appId":1,"project":1,"lifecycle":1,"category":1,"createdOn.date":-1},{"background": true})
+
+
+
+// Query for testing explain plans
+db.eventRecords.find( {
+	appId: "csapssp.gen", project: "SNTC and PSS", lifecycle: "dev",
+	category: "/csap/reports/host/daily",
+	'createdOn.date': { $gte: "2016-08-16", $lte: "2016-08-31" }
+} )
+
+
+// Query for testing explain plans
+db.eventRecords.find( {
+	appId: "csapssp.gen", project: "SNTC and PSS", lifecycle: "dev",
+	category: "/csap/reports/host/daily",
+	'createdOn.date': { $gte: "2016-08-16", $lte: "2016-08-31" }
+} )
+
+
+// Full aggregation - note the quotes on createdOn.date (mongo needs)
+db.eventRecords.aggregate( [
+	{
+		$match:
+				{
+					appId: "csapssp.gen", project: "SNTC and PSS", lifecycle: "dev", category: "/csap/reports/host/daily",
+					'createdOn.date': { $gte: "2016-08-16", $lte: "2016-08-31" }
+				}
+	},
+	{
+		$group:
+				{ _id: { lifecycle: "$lifecycle", date: "$createdOn.date", appId: "$appId", host: "$host", project: "$project" },
+					socketTotal: { $sum: "$data.summary.socketTotal" }, numberOfSamples: { $sum: "$data.summary.numberOfSamples" }
+				}
+	},
+	{ $project: { appId: 1, project: 1, lifecycle: 1, host: 1, numberOfSamples: 1, date: 1, socketTotal: { $divide: ["$socketTotal", "$numberOfSamples"] } } },
+	{ $group: { _id: { lifecycle: "$_id.lifecycle", date: "$_id.date", appId: "$_id.appId", project: "$_id.project" }, socketTotal: { $sum: "$socketTotal" }, numberOfSamples: { $sum: "$numberOfSamples" } } },
+	{ $project: { socketTotal: 1, appId: "$_id.appId", lifecycle: "$_id.lifecycle", project: "$_id.project", date: "$_id.date", _id: 0, numberOfSamples: 1 } },
+	{ $sort: { date: 1 } },
+	{ $group: { _id: { lifecycle: "$lifecycle", appId: "$appId", project: "$project" }, date: { $push: "$date" }, socketTotal: { $push: "$socketTotal" } } },
+	{ $project: { socketTotal: 1, appId: "$_id.appId", lifecycle: "$_id.lifecycle", project: "$_id.project", date: 1, _id: 0 } }
+
+] )

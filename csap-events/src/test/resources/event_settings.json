@@ -1,0 +1,64 @@
+{        
+        "category" : "/csap/settings/user/paranant1",
+        "summary" : "User Preferences",
+        "lifecycle" : "dev",
+        "project" : "CSAP Engineering",
+        "host" : "csap-dev01",
+        "createdOn" : {
+                "unixMs" : 1437587650411,
+                "date" : "2015-08-06",
+                "time" : "12:54:10"                
+        },
+        "data" : {
+                "resource" : [
+                        {
+                                "name" : "OS_MpStat",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "name" : "OS_Load",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "name" : "VmFiles",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "name" : "Network",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "name" : "VmThreads",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "name" : "Memory_Remaining",
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        },
+                        {
+                                "size" : {
+                                        "width" : "30%",
+                                        "height" : "25%"
+                                }
+                        }
+                ]
+        }
+}

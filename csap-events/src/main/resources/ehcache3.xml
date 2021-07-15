@@ -1,0 +1,86 @@
+<config xmlns='http://www.ehcache.org/v3'
+	xmlns:jcache='http://www.ehcache.org/v3/jsr107'>
+
+	<!-- 
+		- refer to:  http://www.ehcache.org/documentation/3.0/examples.html#xml-with-107-extension
+		- tti: time to idle - useful for dropping data rarely/never change
+		- ttl: time to live - useful for items getting updated frequently
+		- WARNING: known issue: xml is ORDER sensitive
+	 -->
+	<service>
+		<jcache:defaults enable-management="true" enable-statistics="true"/>
+	</service>
+
+	<cache alias="attributesCache" uses-template="attributes-cache"/>
+	<cache-template name="attributes-cache">
+		<expiry>
+			<ttl unit="minutes">30</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+		
+
+	<cache alias="numDaysCache" uses-template="number-days-cache"/>
+	<cache-template name="number-days-cache">
+		<expiry>
+			<ttl unit="hours">24</ttl>
+		</expiry>
+		<heap unit="entries">1000</heap>
+	</cache-template>
+
+	<cache alias="metricsReportCache" uses-template="metrics-report-cache"/>
+	<cache-template name="metrics-report-cache">
+		<expiry>
+			<ttl unit="minutes">5</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+
+	<cache alias="historicalPerformanceCache" uses-template="historical-performance"/>
+	<cache-template name="historical-performance">
+		<heap unit="entries">100</heap>
+	</cache-template>
+
+	<cache alias="simpleReportCache" uses-template="simple-report"/>
+	<cache-template name="simple-report">
+		<expiry>
+			<ttl unit="minutes">60</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+
+	<cache alias="detailsReportCache" uses-template="detail-report"/>
+	<cache-template name="detail-report">
+		<expiry>
+			<ttl unit="minutes">60</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+	
+	<!-- event data cache -->
+	<cache alias="healthReportCache" uses-template="health-report"/>
+	<cache-template name="health-report">
+		<expiry>
+			<ttl unit="minutes">60</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+		
+
+	<cache alias="oneMinuteCache" uses-template="one-minute"/>
+	<cache-template name="one-minute">
+		<expiry>
+			<ttl unit="minutes">1</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+
+	<cache alias="oneHourCache" uses-template="one-hour"/>
+	<cache-template name="one-hour">
+		<expiry>
+			<ttl unit="minutes">60</ttl>
+		</expiry>
+		<heap unit="entries">100</heap>
+	</cache-template>
+	
+</config>

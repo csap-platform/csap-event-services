@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Analytics Test</title>
+
+<script th:replace="~{ csap/fragments/csap-common-includes :: pageContent }"></script>
+
+<!--  testing only, not used -->
+<script th:replace="~{ csap/fragments/jqplot-includes :: pageContent }"></script>
+<script th:replace="~{ csap/fragments/misc :: pageContent }"></script>
+
+<script th:src="@{ ${@mvcResourceUrlProvider.getForLookupPath('/js/csap-link.js')} }"></script>
+
+<style>
+
+article.content {
+	padding: 2em;
+}
+
+table.csap {
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+
+table.csap a.csap-link {
+	display: block;
+	margin-bottom: 5px;
+}
+
+table td:nth-child(1), table th:nth-child(1) {
+	width: 20em;
+}
+
+table td:nth-child(2) {
+	width: 5em;
+}
+
+header .noteAlt {
+	font-size: 0.7em;
+	margin: 0;
+	padding: 3px;	
+}
+
+table th {
+	position: relative;
+}
+table div.title {
+	font-size: 10pt;
+	margin-top: -1em;
+	color: black;
+	top: 0.8em;
+}
+
+
+#index {
+	display: grid;
+	color: black;
+	grid-template-columns: repeat(auto-fit, 15em);
+	padding: 5px;
+	grid-column-gap: 20px;
+	grid-row-gap: 0.5em;
+	margin-bottom: 1em;
+	align-items: self-end;
+}
+
+
+</style>
+
+<script>
+$( document ).ready( function () {
+
+	CsapCommon.labelTableRows( $( "table" ) ) ;
+	$( "table a.csap-link" ).click( function ( e ) {
+		e.preventDefault();
+		var url = $( this ).attr( 'href' );
+		window.open( url, '_blank' );
+	} );
+	
+			console.log( `Builds table of contents`);
+		$("table th:first-child div.title").each(function(e) {
+			let $title = $(this);
+
+			let titleName = $title.text();
+			let titleId = titleName.replace(/\s+/g, '');;
+
+			$title.attr("id", titleId);
+
+			let $indexLink = jQuery('<a/>', {
+				class: "csap-link",
+				href: `#${titleId}`,
+				text: titleName
+			});
+
+			$("#index").append($indexLink);
+		});
+
+} );
+
+</script>
+</head>
+
+<body class="csap-full csap-scrollable theme-light theme-tree">
+
+
+	<header th:replace="~{ csap/fragments/page :: header } "></header>
+
+
+	<article class=content>
+
+
+		<div class=csap-white id=index></div>
+
+		<table
+			id="mainTests"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">User Experience</div>
+						Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/}">CSAP Events Portal</a>
+					</td>
+					<td class="col2">html</td>
+					<td class="col2">Events Browser</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/analytics}">CSAP Adoption Portal</a>
+					</td>
+					<td class="col2">html</td>
+					<td class="col2">Shows usage and adoption</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/services(projName='CSAP Platform',appId='SensusCsap')}"> Project Services </a>
+					</td>
+					<td class="col2">html</td>
+					<td class="col2">Service counts by lifecycle UI</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/package-summary(projectName='CSAP Platform',appId='SensusCsap')}"> Project Summary:
+							CSAP Platform </a>
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">Service counts by lifecycle JSON</td>
+				</tr>
+
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/postAnalytics(offSet='1')}">TriggerAdoptionReport</a>
+					</td>
+					<td class="col2">text</td>
+					<td class="col2">processes all projects events from previous day and posts a new /csap/reports/global/daily</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/reportCounts}">/api/report/reportCounts</a>
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">report counts</td>
+				</tr>
+
+			</tbody>
+
+
+		</table>
+
+
+
+		<table
+			id="mainTests"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Performance Apis:</div>
+						 configurable collections, default: 30s, 5 minutes, 1 hour: Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/host_3600'(numberOfDays=1)}"> Host Graphs: 60 minutes</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/host_3600'(numberOfDays=1, life=dev, padLates=true, appId=SensusCsap)}">
+							60 minutes, with padding</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/host_3600'(callback='theFunction',numberOfDays=1)}"> 60 minutes
+							with jsonp</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/host_300'(numberOfDays=1)}"> 5 minute</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/host_30'(numberOfDays=1)}"> 30 second</a>
+
+
+
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">Host OS Shared metrics: includes cpu, disk, memory and many other resources shared by all
+						processes on the host</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/os-process_3600'(numberOfDays=1,serviceName=csap-agent)}"> OS
+							Process Graph: csap-agent, 60 minute</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/os-process_3600'(numberOfDays=1)}"> All: 60 minutes</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/os-process_300'(numberOfDays=1)}"> All: 5 minute</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/os-process_30'(numberOfDays=1)}"> All: 30 second</a>
+
+
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">Service OS Metrics: OS Resources consumed on a per linux process basis, including top, disk
+						reads/writes, open files, open sockets, and many more. Only processes configured will be collected; CSAP auto
+						collects all configured services that have been added to application model.</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/java_3600'(numberOfDays=1,serviceName=csap-agent)}"> Java
+							Graphs: csap-agent, 60 minute</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/java_3600'(numberOfDays=1)}"> All: 60 minutes</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/java_300'(numberOfDays=1)}"> All: 5 minutes</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/java_30'(numberOfDays=1)}"> All: 30 second</a>
+
+
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">Service Java Metrics: a default set of Java metrics will be collected via JMX, including Heap
+						usage, Http requests, and many more.</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/application_3600'(numberOfDays=1,serviceName=csap-agent)}">
+							Application Graphs: csap-agent, 60 minute</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/application_300'(numberOfDays=1,serviceName=csap-agent)}">
+							csap-agent: 5 minute</a>
+
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/' + ${hostname} + '/application_30'(numberOfDays=1,serviceName=csap-agent)}">
+							csap-agent: 30 second</a>
+
+
+
+
+						<a
+							class="csap-link"
+							th:href="@{'/api/metrics/csap-dev04/application_3600'(numberOfDays=1,serviceName=test-k8s-csap-reference)}">
+							test-k8s-csap-reference pod app metrics</a>
+
+
+					</td>
+					<td class="col2">json</td>
+					<td class="col2">Service Application Metrics: The efficiency and availability of a service consists of work
+						produced - resources consumed. CSAP Agent can be configured to collect (Http, JMX) any additional datapoints
+						produced by ServiceEndpoints.</td>
+				</tr>
+
+
+			</tbody>
+
+
+		</table>
+
+
+
+		<table
+			id="eventBrowser"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Report Apis</div>
+						 24 hour summary Data, Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/userid(noParams=test)}"> User Report: 24 hours </a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/userid(numDays=7)}"> User Report: 7 days </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/userid(appId='SensusCsap',life='dev',numDays=2,dateOffSet=3)}"> User Report: dev 2
+							days ago </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/userid(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=2,dateOffSet=3)}">
+							User Report: CSAP Platform </a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">userid reports</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=2)}">Host Report</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">/api/report/host</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1)}"> Service
+							Report </a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1,host='csap-dev04',serviceName='test-k8s-csap-reference')}">
+							test-k8s-csap-reference os-process report summary</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1,host='csap-dev01',serviceName='csap-agent')}">
+							csap-agent os-process report summary</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1,serviceName='csap-agent')}">
+							csap-agent os-process report by host </a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">service report</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1)}"> java report -
+							all dev </a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1)}"> java report
+							dev csap-platform </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(appId='SensusCsap',life='dev',project='CSAP Platform',numDays=1,serviceName='csap-agent')}">
+							java report csap-agent by host</a>
+
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">java report</td>
+				</tr>
+
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,serviceName=csap-agent)}">
+							csap-agent application report</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,serviceName=csap-agent)}">
+							csap-agent application report by host</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/attributes(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,serviceName=csap-agent)}">
+							csap-agent application attribute</a>
+
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">application report</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+		<table
+			id="hostBrowser"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Host Selection Apis</div>
+						:select hosts based on criteria, Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=vm.coresActive,hosts=2)}">Top
+							By Cores</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by cores active</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=process.topCpu,hosts=2)}">Top
+							By Cpu</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by top Cpu</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=process.topCpu_csap-agent,hosts=1)}">Top
+							Mongo By Cpu</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by top Cpu mongo</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=jmx.heapUsed,hosts=2)}">Top
+							By Heap</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by heap</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=jmx.heapUsed_data,hosts=2)}">
+							Top Data Proj By Heap</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by heap data</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=jmxCustom.events-data-service.EventPostRate,hosts=2)}">
+							Top By Event Post</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by Event Post Rate</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=events-data-service.EventPostRate,hosts=2)}">
+							Top By Event Post</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by Event Post Rate</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/top(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,metricsId=health.UnHealthyEventCount,hosts=2)}">
+							Top UnHealthy</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Top by unhealthy</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/low(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,metricsId=vm.coresActive,hosts=2)}">
+							Low By Core</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Low by cores active</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table
+			id="trendBrowser"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Daily Trending: Uses 24hour report collections</div>
+						Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true)}">
+							Core report: Daily</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,trending=true)}">
+							Core report: 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=-1,trending=true)}">
+							Core report: 24 hours / all hosts</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=-1,trending=true,perVm=true)}">
+							Core report: 24 hours/ per host</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,perVm=true)}">
+							Core Per Host</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,perVm=true,top=2)}">
+							Core Top 2</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/core(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,perVm=true,low=2)}">
+							Core Low 2</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">custom/core reports: /api/report/custom/core</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/logRotate(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=MeanSeconds)}">
+							Log Rotate</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/logRotate(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=MeanSeconds,serviceName=csap-agent)}">Log
+							Rotate With Filter</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/health(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5)}">Vm
+							Health Report</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/custom/health(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,perVm=true)}">Vm
+							Health Per Vm</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Custom Reports</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/userid(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=20,trending=true)}">Userid
+							Report</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">User id report</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=1,trending=true,metricsId=totalLoad)}">
+							totalLoad: 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=-1,trending=true,metricsId=totalLoad)}">
+							totalLoad: 24 hours</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalUsrCpu)}">
+							host: totalUsrCpu</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalUsrCpu,divideBy=numberOfSamples)}">
+							host: totalUsrCpu/num samples</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalSysCpu,divideBy=numberOfSamples)}">
+							host: totalSysCpu/num samples</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalUsrCpu,metricsId=totalSysCpu,divideBy=numberOfSamples)}">
+							host: (totalUsrCpu+totalSysCpu)/num samples</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=csapThreadsTotal,allVmTotal=true,divideBy=numberOfSamples)}">
+
+							csapThreadsTotal: all hosts, normalized</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalMemFree)}">
+							host: totalMemFree</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalMemFree,divideBy=numberOfSamples)}">
+							host: totalMemFree/num samples</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalMemFree,divideBy='numberOfSamples',divideBy=1024)}">
+							host: totalMemFree/num samples/1024</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalMemFree,divideBy=10)}">
+							host Report/10</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/host(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=totalMemFree,divideBy=numberOfSamples,divideBy=1024)}">
+							Host Free Memory Trend, normalized in GB</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Host Reports: /api/report/host</td>
+				</tr>
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(numDays=2,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=rssMemory,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent rssMemory: 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(numDays=2,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=rssMemory,divideBy=numberOfSamples)}">
+							rssMemory: All services 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(numDays=1,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=rssMemory,divideBy=numberOfSamples)}">
+							rssMemory: All services 1 day perVm</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(numDays=-1,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=rssMemory,divideBy=numberOfSamples)}">
+							All services: 24 hours</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(numDays=3,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=threadCount,serviceName=test-k8s-csap-reference,divideBy=numberOfSamples)}">
+							test-k8s-csap-reference threadCount: 3 day</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(numDays=1,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=threadCount,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent threadCount: 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(numDays=-1,perVm=false,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=threadCount,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent threadCount: 24 hours</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(numDays=-1,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=threadCount,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent threadCount: 24 hours, perVm</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=topCpu)}">
+							topCpu trend - all services</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=topCpu,serviceName=csap-agent)}">
+							csap-agent topCpu</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=topCpu,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent topCpu/numberOfSamples</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=topCpu,metricsId=rssMemory,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent thread and Rss </a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Report /api/report/os-process</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=threadCount,serviceName='admin,data',divideBy=numberOfSamples)}">
+							threads for admin and data</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/os-process/detail(allVmTotal=true,appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=threadCount,serviceName='admin,data',divideBy=numberOfSamples)}">
+							threads for admin and data allVmTotal</a>
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">multiple service report multi key / num samples</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(numDays=1,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=heapUsed,serviceName=csap-agent)}">
+							csap-agent heapUsed 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(numDays=-1,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=heapUsed,serviceName=csap-agent)}">
+							csap-agent heapUsed 24 hours</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(numDays=-1,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=heapUsed,serviceName=csap-agent)}">
+							csap-agent heapUsed 24 hours per host</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=heapUsed,serviceName=csap-agent)}">
+							Java: heapUsed trend csap-agent</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=cpuPercent,serviceName='csap-agent,csap-admin')}">
+							Java: cpuPercent trend csap-agent,csap-admin</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/java/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=heapUsed,serviceName=csap-agent,divideBy=numberOfSamples)}">
+							csap-agent heapUsed</a>
+
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Report /api/report/java</td>
+				</tr>
+
+
+				<tr>
+					<td class="col1">
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent)}">
+							csap-agent os-commands</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(appId='SensusCsap',life=dev,project='CSAP Platform',numDays=5,trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent,allVmTotal=true,divideBy=numberOfSamples)}">
+							csap-agent os-commands total</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=1,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent)}">
+							csap-agent os-commands 1 day</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=1,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent)}">
+							csap-agent os-commands 1 day, per host</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=-1,perVm=false,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent)}">
+							csap-agent os-commands 24 hours</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=-1,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=OsCommandsCounter,serviceName=csap-agent)}">
+							csap-agent os-commands 24 hours per host</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=-1,allVmTotal=true,perVm=true,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=imageCount,serviceName=docker)}">
+							docker imageCount 24 hours per host</a>
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=-1,allVmTotal=true,perVm=false,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=imageCount,serviceName=docker)}">
+							docker imageCount 24 hours per host,allVmTotal=true</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/api/report/application/detail(numDays=-1,perVm=false,appId='SensusCsap',life=dev,project='CSAP Platform',trending=true,metricsId=LandingCount,serviceName=test-k8s-csap-reference)}">
+							test-k8s-csap-reference os-commands 24 hours</a>
+
+
+
+					</td>
+					<td class="col2">JSON</td>
+					<td class="col2">Application Report: /api/report/application</td>
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+
+		<table
+			id="SpringMvc"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Model View Controller</div>
+						Click to test
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href=".">LandingPage</a>
+					</td>
+					<td>html</td>
+					<td>
+						This page: SpringBoot View using Thymeleaf html5 template
+
+						<div class="news">SpringBoot can easily be deployed as either jar or traditional war file. Use of templates
+							such as thymeleaf (boot default) or freemarker are recommended. Thymeleaf is trivial to integrate and use in
+							SpringBoot (view links below).</div>
+						<a
+							class="pushButton"
+							href="http://www.thymeleaf.org/doc/articles/thvsjsp.html">Compare templates versus jsp</a>
+						<a
+							class="pushButton"
+							href="http://www.thymeleaf.org/doc/articles/springmvcaccessdata.html">Learn about Using html templates</a>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="currentTime">currentTime</a>
+					</td>
+					<td>text</td>
+					<td>Spring MVC returning plain text</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="currentUser">currentUser</a>
+					</td>
+					<td>text</td>
+					<td>Spring MVC returning plain text, and id of logged in user</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="currentUserDetails">currentUserDetails</a>
+					</td>
+					<td>text</td>
+					<td>Spring MVC returning plain text, and id of logged in user</td>
+				</tr>
+
+				<tr>
+					<td>
+						<button
+							id="currentTimeButton"
+							class="pushButton">currentTime</button>
+					</td>
+					<td>html</td>
+					<td>Spring MVC via jquery and alertify</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							id="themeTablesButton"
+							class="pushButton">theme tables</button>
+					</td>
+					<td>html</td>
+					<td>JQuery tablesorter on tables</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="helloWithOptionalName">helloWithOptionalName</a>
+					</td>
+					<td>text</td>
+					<td>Spring @RestController with multiple @RequestMappings and Optional @PathVariable name</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="testException">testException</a>
+					</td>
+					<td>text</td>
+					<td>Spring @RestController Exception Advice</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="testNullPointer">testNullPointer</a>
+					</td>
+					<td>text</td>
+					<td>Spring @Controller Null Pointer Exception Advice</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="missingTemplate">missingTemplate</a>
+					</td>
+					<td>text</td>
+					<td>Missing thymeleaf template</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="malformedTemplate">malformedTemplate</a>
+					</td>
+					<td>text</td>
+					<td>malformedTemplate thymeleaf template. ALL elements must be terminated</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="addSessionVar">addSessionVar</a>
+					</td>
+					<td>text</td>
+					<td>Spring MVC with session variable; note embedded tomcat can optional persist over restarts, or distribute
+						for stateless containers via redis</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="testAclFailure">testAclFailure</a>
+					</td>
+					<td>html</td>
+					<td>Spring Security - verify ACL deny message</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							href="testAsync">test @async</a>
+					</td>
+					<td>html</td>
+					<td>verify async thread pool</td>
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+		<table
+			id="eventBrowser"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Event Browser</div>
+						Click to launch
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{/}">All Events</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(appId='SensusCsap',life=dev,category='/csap/ui/*',project='CSAP Platform')}">CSAP Platform
+							Events</a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/reports/*') }">/csap/reports</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/ui/*')}">/csap/ui</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/reports/health*') }">/csap/reports/health</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/ui/*',userid='pnightin')}">pnightin events</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/ui/*',userid='pnightin',days=60)}">pnightin events 60 days</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/*',appId=SensusCsap,life=dev,hostName='csap-prd01')}">csap-prd01 events</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/*',appId=SensusCsap,life=dev,hostName='csap-prd99')}">csap-prd99 events</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(hostName='csap-prd01')}">csap-prd01 events (long)</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/metrics/*')}">/csap/metrics</a>
+
+						<a
+							class="csap-link"
+							th:href="@{/(category='/csap/System/*')}">/csap/System</a>
+
+					</td>
+					<td>html</td>
+					<td>Show Events</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/metadata}">Search filters</a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/metadata(appId='SensusCsap')}">Search filters - SensusCsap</a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/metadata(appId='SensusCsap',life='dev',fromDate='1/26/2017',toDate='2/1/2017')}">Search
+							filters - csap dev</a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/metadata(appId='SensusCsap',project='SNTC and PSS',life='dev',fromDate='1/26/2017',toDate='2/1/2017')}">Search
+							filters - smart dev</a>
+					</td>
+					<td>Json</td>
+					<td>/metadata: returns search filters such as userids, categories, hosts, etc</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/filteredCount}"> event counts </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/filteredCount(appId='SensusCsap')}"> SensusCsap </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/filteredCount(appId='SensusCsap')}"> SensusCsap </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/filteredCount(search[value]='csap-linkSearchText=/csap/System/*')}"> count
+							csap-linkSearchText=/csap/System/* </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/filteredCount(searchText='appId=SensusCsap,lifecycle=dev,from=9/2/2016,to=9/9/2016')}">
+							count SensusCsap </a>
+
+					</td>
+					<td>Json</td>
+					<td>Filtered Count</td>
+				</tr>
+
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{/stats}">Mongo Metrics</a>
+					</td>
+					<td>html</td>
+					<td>Metrics are collected by connecting to Mongo via java driver and pulling info</td>
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+
+		<table
+			id="eventApiLocator"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Event API</div>
+						Click to test
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/latest(category='/csap/health',appId='SensusCsap',life='dev')}"> Latest Health Event </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/latestCached(category='/csap/health',appId='SensusCsap',life='dev')}"> Latest Cached
+							Health Event </a>
+
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/latestCached(category='/csap/system/model/summary',appId='SensusCsap',life='dev')}">
+							Latest Model - csap dev </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/latestCached(category='/csap/system/model/summary',appId='csapir.gen',life='dev')}">
+							Latest Model - no project </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/latestCached(category='/csap/system/model/summary',appId='csapir.gen',life='dev',project='Contract_MPC_OV')}">
+							Latest Model - with project </a>
+
+					</td>
+					<td>Json</td>
+					<td>Latest Event</td>
+				</tr>
+
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/appIds}"> Appids </a>
+
+
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/appIds(category='/csap/reports/host/daily',numDays=7)}"> Appids by filter </a>
+
+
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/appIds(callback='someTestFunction',category='/csap/reports/host/daily',numDays=7)}">
+							Appids by filter and callback </a>
+					</td>
+					<td>Json</td>
+					<td>Appids</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/lifecycles(appId='SensusCsap',category='/csap/reports/host/daily',numDays=7)}">
+							Lifecycles - SensusCsap </a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/lifecycles(appId='SensusCsap',category='/csap/reports/host/daily',numDays=7)}">
+							Lifecycles - SensusCsap </a>
+					</td>
+					<td>Json</td>
+					<td>Life cycles</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/count(appId='SensusCsap')}">Count-SensusCsap</a>
+
+						<a
+							class="csap-link"
+							th:href="@{api/event/count(appId='SensusCsap',project='CSAP Engineering')}">Count-SensusCsap,CSAP Engineering</a>
+					</td>
+					<td>Json</td>
+					<td>Count</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event/logRotateReport(appId=SensusCsap)}">Log rotate report</a>
+					</td>
+					<td>Json</td>
+					<td>Log rotate report</td>
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+		<table
+			id="eventServiceLocator"
+			class="csap">
+			<thead>
+
+				<tr>
+					<th>
+						<div class="title">Event Service API</div>
+						Click to test
+					</th>
+					<th>returns</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event}">Get Event</a>
+					</td>
+					<td>Json</td>
+					<td>Get Event</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event(userid='SensusCsap',pass='change')}">Get Event With Credentials</a>
+					</td>
+					<td>Json</td>
+					<td>Get Event With Credentials</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event(search[value]='csap-linkSearchText=/csap/health')}">Health Events</a>
+					</td>
+					<td>Json</td>
+					<td>Health Events</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event(search[value]='csap-linkSearchText=/csap/ui')}">UI events</a>
+						<a
+							class="csap-link"
+							th:href="@{api/event(start=0,length=2,search[value]='appId=SensusCsap,from=5/20/2020,to=5/27/2020,csap-linkSearchText=/csap/ui')}">UI
+							date range</a>
+						<a
+							class="csap-link"
+							th:href="@{api/event(start=0,length=200,search[value]='appId=SensusCsap,csap-linkSearchText=/csap/ui')}">UI last
+							200 events</a>
+					</td>
+					<td>Json</td>
+					<td>UI events</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event(search[value]='csap-linkSearchText=/csap/metrics/*')}">Metrics Events</a>
+					</td>
+					<td>Json</td>
+					<td>Metrics Events</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<a
+							class="csap-link"
+							th:href="@{api/event(search[value]='csap-linkSearchText=/csap/System/*')}">System Evnets</a>
+					</td>
+					<td>Json</td>
+					<td>System Evnets</td>
+				</tr>
+
+
+				<tr>
+					<td>Post an event to data service. Use of generic id - typically belonging to CSAPRESTAPP security group.</td>
+					<td>Text</td>
+					<td>
+						<form
+							action="api/event"
+							method="post">
+							<label>
+								userid:
+								<input
+									id="userid"
+									style="width: 6em"
+									name="userid"
+									value="demoToken" />
+							</label>
+							<label>
+								pass:
+								<input
+									id="pass"
+									style="width: 6em;"
+									name="pass"
+									value="demoToken"
+									type="password" />
+							</label>
+
+							<input
+								type="submit"
+								class="submit"
+								value="Post Event" />
+
+							<textarea
+								name="eventJson"
+								cols="50"
+								rows="10">
+{
+	"category" : "/csap/health",
+	"summary" : "Health Data",
+	"lifecycle" : "dev",
+	"project" : "demoToken",
+	"host": "demoToken",
+	"createdOn" : {
+						"unixMs" : 1521056490299,
+						"date" : "2018-03-14",
+						"time" : "15:41:30"
+				  },
+	"data" : {
+
+		"vm" : {
+									"cpuCount" : 8,
+								 "cpuLoad" : 0.0,
+									"host" : "demoToken",
+									"packageName" : "default",
+
+				"capabilityName" : "default",
+									"lifecycle" : "dev"
+						 },
+					"Healthy" : true,
+					"services" : {
+										 "total" : 20,
+
+						"active" : 18
+								 }
+                                               }
+                                       }
+							</textarea>
+
+
+						</form>
+
+					</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+
+	</article>
+
+
+
+	<footer th:replace="csap/fragments/page :: footer"></footer>
+</body>
+
+</html>

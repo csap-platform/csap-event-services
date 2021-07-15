@@ -1,0 +1,35 @@
+{        
+        "category" : "/csap/reports/host/daily",
+        "createdOn" : {
+                "unixMs" : 1429763922771,
+                "date" : "2015-04-22",
+                "time" : "23:38:42"                
+        },
+        "host" : "csap-dev02",
+        "summary" : "Summary Report",
+        "lifecycle" : "dev",
+        "project" : "CSAP Engineering",
+        "data" : {
+                "summary" : {
+                        "cpuCountAvg" : 8,
+                        "memoryInMbAvg" : 15949,
+                        "swapInMbAvg" : 4031,
+                        "totActivity" : 11,
+                        "numberOfSamples" : 1461,
+                        "totalUsrCpu" : 829,
+                        "totalSysCpu" : 73,
+                        "totalMemFree" : 16912722,
+                        "totalBufFree" : 1671867,
+                        "totalIo" : 1075,
+                        "alertsCount" : 1,
+                        "totalLoad" : 191.57000000000005,
+                        "totalFiles" : 4788128,
+                        "threadsTotal" : 1501880,
+                        "csapThreadsTotal" : 1182767,
+                        "fdTotal" : 7873604,
+                        "csapFdTotal" : 6646247,
+                        "socketTotal" : 87565,
+                        "socketWaitTotal" : 6289
+                }
+        }
+}

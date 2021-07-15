@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+	updateCheck="true" monitoring="autodetect" dynamicConfig="true">
+
+	<!-- refer to http://ehcache.org/ehcache.xml -->
+	
+	<cache name="cacheWithNoExpiration" 
+		maxEntriesLocalHeap="10" 
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<cache name="attributesCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="1800" />
+	
+	<cache name="numDaysCache" 
+		maxEntriesLocalHeap="1000" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="86400" />
+	
+	<cache name="metricsReportCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="300" />
+	
+	<cache name="historicalPerformanceCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU" />
+	
+	<cache name="simpleReportCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" />
+	
+	<cache name="userIdReports" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" />
+	
+	<cache name="detailsReportCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" />	
+		
+	<cache name="healthReportCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" />
+	
+	<cache name="oneMinuteCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="60" />
+	
+	<cache name="oneHourCache" 
+		maxEntriesLocalHeap="100" 
+		memoryStoreEvictionPolicy="LRU"
+		timeToLiveSeconds="3600" />	
+
+</ehcache>

@@ -1,0 +1,27 @@
+{        
+        "category" : "/csap/health",
+        "createdOn" : {
+                "unixMs" : 1429765100482,
+                "date" : "2015-04-22",
+                "time" : "23:58:20"                
+        },
+        "host" : "csapdb-dev01",
+        "summary" : "Health Data",
+        "lifecycle" : "dev",
+        "project" : "CSAP Engineering",
+        "data" : {
+                "vm" : {
+                        "cpuCount" : 8,
+                        "cpuLoad" : 0,
+                        "host" : "csapdb-dev01",
+                        "packageName" : "CSAP Engineering",
+                        "capabilityName" : "CSAP Development",
+                        "lifecycle" : "dev"
+                },
+                "Healthy" : true,
+                "services" : {
+                        "total" : 9,
+                        "active" : 8
+                }
+        }
+}

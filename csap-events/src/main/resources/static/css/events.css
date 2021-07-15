@@ -1,0 +1,269 @@
+article.content {
+	padding-top: 0.5em;
+	display: grid;
+	grid-template-rows: 2em auto;
+}
+
+#event-scrollable {
+	overflow: auto;
+}
+
+#advanced {
+	padding: 2em;
+}
+
+#advanced label {
+	display: grid;
+	grid-template-columns: 10em 30em;
+	justify-items: right;
+	margin-bottom: 10px;
+	column-gap: 1em;
+}
+
+#advanced label input, #advanced label select {
+	justify-self: left;
+}
+
+#advanced label input[type='text'] {
+	width: 20em;
+}
+
+#searchControls {
+	position: relative;
+}
+
+#searchControls label {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#searchControls label#date-controls {
+	margin-left: 3em;
+}
+
+#metaLoading {
+	position: absolute;
+	top: 1.9em;
+	z-index: 1;
+	left: -0.6em;
+	background-color: white;
+	border-radius: 5px;
+}
+
+#metaLoading img {
+	width: 18px;
+	vertical-align: bottom;
+}
+
+#metaTimeOut {
+	background-image: url('../images/16x16/caution.svg');
+	padding-left: 1em;
+	
+}
+
+#simpleSearch {
+	width: 20em;
+	margin-right: 0em;
+	vertical-align: bottom;
+}
+
+#eventsTable th {
+	background-color: #cee9ec;
+}
+
+#eventsTable td.details-control {
+	background: url('../images/details_open.png') no-repeat center left;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+#eventsTable td.details-control:hover {
+	text-decoration: underline;
+}
+
+#eventsTable tr.shown td.details-control {
+	background: url('../images/details_close.png') no-repeat center left;
+}
+
+.group {
+	min-width: 1000px;
+	font-weight: bold;
+}
+
+.dataTables_filter {
+	display: none;
+}
+
+#eventsTable th {
+	text-align: left;
+	padding: 0;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	vertical-align: text-top;
+}
+
+#eventsTable th  {
+	min-width: 10em;
+}
+
+#eventsTable th:last-child  {
+	min-width: 8em;
+}
+
+#eventsTable th:first-child  {
+	min-width: 12em;
+}
+
+#eventsTable_length {
+	font-size: 10pt;
+	font-weight: bold;
+	position: fixed;
+	z-index: 1;
+	top: 2.5em;
+	right: 2em;
+}
+
+#eventsTable_length select {
+	font-size: 10px;
+	margin: 0;
+}
+
+#eventsTable {
+	width: 100%;
+}
+
+pre {
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+#healthReportsTable pre {
+	white-space: pre;
+	font-size: 10pt;
+}
+
+#healthReportsTable img {
+	height: 10px;
+	width: 10px;
+}
+
+#healthReportsTable pre.pass, #healthReportsTable pre.fail {
+	background-image: url('../images/16x16/green3.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 12px 12px;
+	padding-right: 20px;
+	margin-right: 5px;
+}
+
+#healthReportsTable pre.fail {
+	background-image: url('../images/16x16/red2.png');
+}
+
+table.dataTable tbody tr {
+	font-size: 10pt;
+}
+
+table.healthReportsTable {
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+#healthReportsTable td:nth-child(1) {
+	min-width: 9em;
+	text-align: left;
+	vertical-align: top;
+}
+
+#healthReportsTable td:nth-child(2), #healthReportsTable th:nth-child(2)
+	{
+	min-width: 6em;
+	text-align: center;
+	vertical-align: top;
+}
+
+#healthReportsTable td:nth-child(3), #healthReportsTable th:nth-child(3)
+	{
+	min-width: 4em;
+	text-align: center;
+	vertical-align: top;
+}
+
+#healthReportsTable th:nth-child(5) {
+	width: 45em;
+	text-align: center;
+}
+
+#healthReportsTable td:nth-child(4) {
+	min-width: 4.5em;
+	text-align: left;
+	padding-right: 0;
+}
+
+#healthReportsTable th:nth-child(4) {
+	text-align: center;
+}
+
+#healthReportsTable td:nth-child(5) {
+	width: 45em;
+	text-align: left;
+	vertical-align: top;
+}
+
+#adminButtons {
+	margin-left: 2em;
+}
+
+#searchDialog {
+	font-size: 8pt;
+	margin-right: 2em;
+}
+
+#searchButton {
+	padding: 0;
+	margin-right: 1em;
+}
+
+#to, #from {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#searchControls button {
+	background-size: 14px 14px;
+	vertical-align: text-bottom;
+}
+
+#logRotateTable td:nth-child(2), #logRotateTable td:nth-child(3),
+	#logRotateTable td:nth-child(4) {
+	text-align: center;
+}
+
+.userids {
+	font-size: 0.8em;
+}
+
+.ms {
+	padding-left: 14em;
+}
+
+#editDialog label span {
+	display: inline-block;
+	width: 10em;
+	text-align: right;
+}
+
+#editDialog label {
+	display: inline-block;
+}
+
+.ui-menu {
+	z-index: 9999 !important;
+}
+
+.ui-autocomplete {
+	height: 400px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
